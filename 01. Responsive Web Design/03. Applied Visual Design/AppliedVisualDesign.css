@@ -1,0 +1,1203 @@
+footer {
+  display: block;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background: #000;
+  color: #FFF;
+  height: 50px;
+}
+footer p {
+  display: inline;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+footer p a {
+  float: right;
+  position: relative;
+  top: 10px;
+  right: 20px;
+}
+
+a:visited {
+  color: purple;
+}
+a:hover{
+  color: #333;
+}
+
+h1#top {
+  padding-top: 30px;
+}
+#main-section {
+  padding-bottom: 50px;
+}
+/* ==== #section1 ==== */
+#section1 h4 {
+    text-align: center;
+  }
+#section1 p {
+    text-align: justify;
+  }
+#section1 .links {
+    margin-right: 20px;
+
+  }
+#section1 .fullCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+#section1 .cardContent {
+    padding: 10px;
+  }
+
+/* ==== #section2 ==== */
+
+#section2 h4 {
+    text-align: center;
+  }
+#section2 p {
+    text-align: justify;
+  }
+#section2 .links {
+    margin-right: 20px;
+    text-align: left;
+  }
+#section2 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+#section2 .cardContent {
+    padding: 10px;
+  }
+
+/* ==== #section3 ==== */
+  #section3 h4 {
+    text-align: center;
+    height: 25px;
+  }
+  #section3 p {
+    text-align: justify;
+  }
+  #section3 .links {
+    margin-right: 20px;
+    text-align: left;
+  }
+  #section3 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section3 .cardContent {
+    padding: 10px;
+  }
+/* ==== #section4 ==== */
+  #section4 h4 {
+    text-align: center;
+    height: 25px;
+  }
+  #section4 p {
+    text-align: justify;
+  }
+  #section4 .links {
+    text-align: left;
+    color: black;
+  }
+  #section4 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section4 .cardContent {
+    padding: 10px;
+  }
+  #section4 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section5 ==== */
+  #section5 h4 {
+    text-align: center;
+    height: 25px;
+  }
+  #section5 p {
+    text-align: justify;
+  }
+  #section5 .links {
+    text-align: left;
+    color: black;
+  }
+  #section5 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section5 .cardContent {
+    padding: 10px;
+  }
+  #section5 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section6 ==== */
+  #section6 h4 {
+    text-align: center;
+    height: 25px;
+  }
+  #section6 p {
+    text-align: justify;
+  }
+  #section6 .links {
+    text-align: left;
+    color: black;
+  }
+  #section6 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section6 .cardContent {
+    padding: 10px;
+  }
+  #section6 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section7 ==== */
+  #section7 h4 {
+    text-align: center;
+    height: 25px;
+  }
+  #section7 p {
+    text-align: justify;
+  }
+  #section7 .links {
+    text-align: left;
+    color: black;
+  }
+  #section7 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section7 .cardContent {
+    padding: 10px;
+  }
+  #section7 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section8 ==== */
+ #section8 h4 {
+    text-align: center;
+    height: 25px;
+  }
+  #section8 p {
+    text-align: justify;
+  }
+  #section8 .links {
+    text-align: left;
+    color: black;
+  }
+  #section8 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section8 .cardContent {
+    padding: 10px;
+  }
+  #section8 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section9 ==== */
+  #section9 h4 {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(45, 45, 45, 0.1);
+
+  }
+  #section9 p {
+    text-align: justify;
+  }
+  #section9 .links {
+    text-align: left;
+    color: black;
+  }
+  #section9 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section9 .cardContent {
+    padding: 10px;
+  }
+  #section9 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section10 ==== */
+  #section10 h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+  }
+  #section10 p {
+    text-align: justify;
+  }
+  #section10 .links {
+    text-align: left;
+    color: black;
+  }
+  #section10 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section10 .cardContent {
+    padding: 10px;
+  }
+  #section10 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section11 ==== */
+  #section11 h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+  }
+  #section11 p {
+    text-align: justify;
+  }
+  #section11 .links {
+    text-align: left;
+    color: black;
+  }
+
+  #section11 #thumbnail{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  #section11 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section11 .cardContent {
+    padding: 10px;
+  }
+  #section11 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section12 ==== */
+  #section12 h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+  }
+  #section12 p {
+    text-align: justify;
+  }
+  #section12 .links {
+    text-align: left;
+    color: black;
+    opacity: 0.7;
+  }
+  #section12 #thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  #section12 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section12 .cardContent {
+    padding: 10px;
+  }
+  #section12 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section13 ==== */
+  #section13 h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+    text-transform: uppercase;
+  }
+  #section13 p {
+    text-align: justify;
+  }
+  #section13 .links {
+    text-align: left;
+    color: black;
+    opacity: 0.7;
+  }
+  #section13 #thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  #section13 .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  #section13 .cardContent {
+    padding: 10px;
+  }
+  #section13 .cardText {
+    margin-bottom: 30px;
+  }
+/* ==== #section14 ==== */
+#section14 .title-heading {
+  font-size:21px;
+}
+  #section14 h1{
+    font-size:68px;
+  }
+
+  #section14 h2{
+    font-size:52px;
+  }
+
+  #section14 h3{
+    font-size:40px;
+  }
+
+  #section14 h4{
+    font-size:32px;
+  }
+
+  #section14 h5{
+    font-size:21px;
+  }
+
+  #section14 h6{
+    font-size:14px;
+  }
+/* ==== #section15 ==== */
+#section15 .title-heading {
+  font-size:21px;
+}
+
+  #section15 h1 {
+    font-size: 68px;
+    font-weight: 800;
+  }
+  #section15 h2 {
+    font-size: 52px;
+    font-weight: 600;
+  }
+  #section15 h3 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  #section15 h4 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  #section15 h5 {
+    font-size: 21px;
+    font-weight: 300;
+  }
+  #section15 h6 {
+    font-size: 14px;
+    font-weight: 200;
+  }
+/* ==== #section16 ==== */
+#section16  p {
+    font-size: 16px;
+  }
+/* ==== #section17 ==== */
+#section17 p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+/* ==== #section18 ==== */
+#section18 a {
+    color: #000;
+  }
+#section18 a:hover {
+  color: blue;
+}
+/* ==== #section19 ==== */
+#section19 h2 {
+    position: relative;
+    top: 15px;
+  }
+/* ==== #section20 ==== */
+#section20 h2 {
+    position: relative;
+    left: 15px;
+    bottom: 10px;
+  }
+/* ==== #section21 ==== */
+#section21 #searchbar {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  #section21 section {
+    position: relative;
+  }
+/* ==== #section22 ==== */
+  #section22 #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #767676;
+  }
+  #section22 nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  #section22 nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  #section22 a {
+    text-decoration: none;
+  }
+/* ==== #section23 ==== */
+  #section23{
+    height: 250px;
+  }
+  #section23 #left {
+    float:left;
+    width: 50%;
+  }
+  #section23 #right {
+    float:right;
+    width: 40%;
+  }
+  #section23 aside, #section23 section {
+    padding: 2px;
+    background-color: #ccc;
+  }
+/* ==== #section24  ==== */
+  #section24 div {
+    width: 60%;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  #section24 .first {
+    background-color: red;
+    position: relative;
+    z-index:2;
+  }
+  #section24 .second {
+    background-color: blue;
+    position: relative;
+    left: 40px;
+    top: -100px;
+    z-index: 1;
+  }
+
+/* ==== #section25 ==== */
+  #section25 .second-div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+/* ==== #section26 ==== */
+  #section26 .blue {
+    background-color: #0000FF;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+  }
+  #section26 .yellow {
+    background-color: #FFFF00;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+/* ==== #section27 ==== */
+  #section27 .orange {
+    background-color: #FF7D00;
+  }
+
+  #section27 .cyan {
+    background-color: #00FFFF;
+  }
+
+  #section27 .raspberry {
+    background-color: #FF007D;
+  }
+
+  #section27 .raspberry, #section27 .cyan, #section27 .orange{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+/* ==== #section28 ==== */
+  #section28 header {
+    background-color: #09A7A1;
+    color: white;
+    padding: 0.25em;
+  }
+  #section28 h2 {
+    color: #09A7A1;
+  }
+  #section28 button {
+    background-color: #FF790E;
+  }
+  #section28 footer {
+    background-color: #09A7A1;
+    color: white;
+    padding: 0.5em;
+  }
+/* ==== #section29 ==== */
+  #section29  .green {
+    background-color: hsl(120, 100%, 50%);
+  }
+
+  #section29  .cyan {
+    background-color: hsl(180, 100%, 50%);
+  }
+
+  #section29  .blue {
+    background-color: hsl(240, 100%, 50%);
+  }
+
+  #section29  .blue, #section29  .cyan, #section29  .green {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+  }
+/* ==== #section30 ==== */
+  #section30 header {
+    background-color: hsl(180, 90%, 35%);
+    color: #FFFFFF;
+  }
+
+  #section30 nav {
+    background-color: hsl(180, 80%, 25%);
+  }
+
+  #section30 h1 {
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+
+  #section30 nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+
+  #section30 nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  #section30 a {
+    text-decoration: none;
+    color: inherit;
+  }
+/* ==== #section31 ==== */
+ #section31 .gradient{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  }
+/* ==== #section32 ==== */
+#section32 .gradient{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+/* ==== #section33 ==== */
+  #section33 {
+  background:url("https://i.imgur.com/MJAkxbh.png");
+}
+/* ==== #section34 ==== */
+  #section34 .ball {
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: relative;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    border-radius: 50%;
+  }
+  #section34 #ball1 {
+    left:20%;
+  }
+  #section34 #ball2 {
+    left:50%;
+    bottom: 20px;
+    transform:scale(1.5);
+  }
+/* ==== #section35 ==== */
+  .hover {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+
+  .hover:hover {
+    transform: scale(1.1);
+  }
+/* ==== #section36 ==== */
+  #section36 .box {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #section36 #top {
+    background-color: red;
+  }
+  #section36 #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+/* ==== #section37 ==== */
+  #section37 .box {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+  }
+  #section37 #top {
+    background-color: red;
+    transform: skewY(-10deg);
+  }
+  #section37 #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+/* ==== #section38 ==== */
+#section38 .center {
+  position: relative;
+  top: -20px;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px blue;
+}
+/* ==== #section39 ==== */
+#section39 .heart {
+  position: relative;
+  margin: auto;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+}
+#section39 .heart:after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+#section39 .heart:before {
+  content:"";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+/* ==== #section40 ==== */
+  #section40 .box {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #section40 #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+  @keyframes rainbow {
+    0% {
+    background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+    background-color: yellow;
+    }
+    }
+/* ==== #section41 ==== */
+  #section41 button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  #section41 button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+  }
+
+  @keyframes background-color {
+    100% {
+    background-color: #4791d0;
+    }
+  }
+/* ==== #section42 ==== */
+  #section42 button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+  #section42 button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* add your code below this line */
+    animation-fill-mode: forwards;
+    /* add your code above this line */
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+/* ==== #section43 ==== */
+#section43 .rectangle {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+#rect {
+  animation-name: rainbow;
+  animation-duration: 4s;
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+    left: 25px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+    left:-25px;
+  }
+}
+/* ==== #section44 ==== */
+  #section44 #ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: relative;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    50% {
+      left: 60%;
+      opacity:0.1;
+    }
+  }
+/* ==== #section45 ==== */
+#section45 {
+  height: 500px;
+}
+ #section45 #ball {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+/* ==== #section46 ==== */
+#section46 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+  }
+
+  #section46 .heart {
+    position: relative;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+  }
+  #section46 .heart:after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  #section46 .heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+/* ==== #section47 ==== */
+  .stars {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+  }
+
+  .star-1 {
+    margin-top: 15%;
+    margin-left: 60%;
+    animation-name: twinkle-1;
+    animation-duration: 1s;
+  }
+
+  .star-2 {
+    margin-top: 20%;
+    margin-left: 25%;
+    animation-name: twinkle-2;
+    animation-duration: 1s;
+  }
+
+  @keyframes twinkle-1 {
+    50% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes twinkle-2 {
+    20% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  }
+
+  #section47 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+  }
+/* ==== #section48 ==== */
+  .stars {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+  }
+
+  .star-1 {
+    margin-top: 15%;
+    margin-left: 60%;
+    animation-duration: 1s;
+    animation-name: twinkle;
+  }
+
+  .star-2 {
+    margin-top: 25%;
+    margin-left: 25%;
+    animation-duration: 0.9s;
+    animation-name: twinkle;
+  }
+
+  .star-3 {
+    margin-top: 10%;
+    margin-left: 50%;
+    animation-duration: 1.1s;
+    animation-name: twinkle;
+  }
+
+  @keyframes twinkle {
+    20% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  }
+  #section48 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+  }
+/* ==== #section49 ==== */
+  #section49{
+    height: 500px;
+  }
+  #section49 .balls {
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #section49 #ball1 {
+    left:27%;
+    animation-timing-function:linear;
+  }
+  #section49 #ball2 {
+    left:56%;
+    animation-timing-function:ease-out;
+  }
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 249px;
+  }
+}
+/* ==== #section50 ==== */
+  #section50{
+    height: 500px;
+  }
+  #section50 .balls{
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #section50 #ball1 {
+    left: 27%;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  }
+  #section50 #ball2 {
+    left: 56%;
+    animation-timing-function: ease-out;
+  }
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 249px;
+  }
+}
+/* ==== #section51 ==== */
+#section51 {
+  height: 500px;
+}
+  #section51 .balls{
+    border-radius: 50%;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #section51 #red {
+    background: red;
+    left: 27%;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  }
+  #section51 #blue {
+    background: blue;
+    left: 56%;
+    animation-timing-function: ease-out;
+  }
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 249px;
+    }
+  }
+/* ==== #section52 ==== */
+#section52 {
+  height: 650px;
+}
+  #section52 .balls {
+    border-radius: 50%;
+    top: 249px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #section52 #red {
+    background: red;
+    left: 25%;
+    animation-timing-function: linear;
+  }
+  #section52 #blue {
+    background: blue;
+    left: 50%;
+    animation-timing-function: ease-out;
+  }
+  #section52 #green {
+    background: green;
+    left: 75%;
+    animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+  }
+
+  @keyframes jump {
+    50% {
+      top: 10%;
+    }
+  }

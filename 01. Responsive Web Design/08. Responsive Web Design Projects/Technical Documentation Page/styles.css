@@ -1,0 +1,167 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+nav {
+  float:left;
+  width: 20%;
+  position: fixed;
+  background: #FF3366;
+  height: 100%;
+  padding: 20px 1%;
+  border-right: 3px solid #011627;
+  color: #FFF;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+nav h1 {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+nav ul{
+  list-style: none;
+  width: 100%;
+  position: relative;
+  right: 60px;
+
+}
+nav ul a{
+  text-decoration: none;
+}
+nav ul a li{
+  color: #FFF;
+  padding: 13px 20px;
+  font-size: 1em;
+  border-top: 2px solid #011627;
+  width: 100%;
+  text-transform: uppercase;
+}
+nav ul a.nav-link.last-link li{
+  border-bottom: 2px solid #011627;
+}
+
+nav ul a li:hover{
+  color: #011627;
+}
+
+main {
+  float:right;
+  width: 80%;
+  padding: 10px 3% 100px;
+  box-sizing: border-box;
+  height: 100%;
+}
+pre {
+  font-family: 'Cousine', monospace;
+  line-height: 30px;
+}
+h2 {
+  font-size: 2em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  hieght: 50px;
+  background: #011627;
+  text-align: center;
+}
+footer p.end-tag a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer p.end-tag a:hover {
+  color: #FF3366;
+}
+
+@media only screen and (max-height: 860px){
+  nav ul a li{
+    padding: 10px 20px;
+    font-size: 1em;;
+  }
+}
+@media only screen and (max-height: 780px) and (max-width: 1354px){
+  nav h1 {
+    font-size: 1.5em;
+  }
+
+}
+
+@media only screen and (max-height: 780px) and (max-width: 1170px){
+  nav h1 {
+    font-size: 1.2em;
+  }
+  nav ul a li{
+    font-size: .8em;;
+  }
+}
+@media only screen and (max-height: 745px), screen and (max-width:1024px), screen and (max-height:884px) and (max-width:1098){
+  nav{
+    float: none;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+  }
+
+  nav h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  nav ul{
+    right: 0px;
+    margin: 0 auto;
+  }
+  nav ul a li{
+    padding: 0;
+    font-size: 1em;
+    border: none;
+    float: left;
+    width: auto;
+
+  }
+  nav ul a.nav-link.last-link li{
+    border: none;
+  }
+  main {
+    float: none;
+    padding: 150px 5% 100px;
+  }
+  main,section, article {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1600px){
+  nav ul a li{
+    color: #FFF;
+    padding: 13px 10px 13px 20px;
+  }
+}
+
+@media only screen and (max-width: 585px){
+  nav {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,100 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    font-size: 16px;
+    color:#FFF;
+}
+
+a{
+    color:#FFF;
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(141, 6, 6);
+    transition: color .2s;
+}
+
+nav {
+    border-bottom: 1px solid #FFF;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+}
+
+#logo{
+      width: 12.5em;
+}
+
+#tribute-text{
+    font-family: 'Bangers', cursive;
+    color: #FFF;
+    font-size: 1.5em;
+    position: relative;
+    bottom: .625em;
+}
+
+header{
+    background-color: #000000;
+    background-image: url("../images/texture2.png");
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h3{
+    font-size: 1.5em;
+}
+.album-image {
+    margin: 0 auto;
+}
+
+.album-title{
+    font-family: 'Bangers', cursive;
+    font-size: 1.5em;
+}
+.album-caption {
+    font-size: .8em;
+}
+
+#section-3{
+    background-color: rgb(3, 3, 3);
+}
+#video-container {
+    width: 35em;
+}
+iframe{
+    box-shadow: #000 10px 15px 5px;
+}
+#tribute-info{
+    line-height: 1.5em;
+    text-align: center;
+}
+.highlight {
+    color: #555;
+}
+#section-5 {
+    height: 500px;
+    background-color: #000000;
+    background-image: url("../images/texture2.png");
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #000;
+    padding: 0 !important;
+}
+
+#copyright{
+    font-size: .6em;
+}
+
+

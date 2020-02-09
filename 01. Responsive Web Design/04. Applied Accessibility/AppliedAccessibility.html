@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>freeCodeCamp | Applied Accessibility</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="AppliedAccessibility.css">
+  </head>
+  <body>
+    <aside id="sidebar">
+      <a href="#section1">01. Add a Text Alternative to Images for Visually Impaired Accessibility</a>
+      <a href="#section2">02. Know When Alt Text Should be Left Blank</a>
+      <a href="#section3">03. Use Headings to Show Hierarchical Relationships of Content</a>
+      <a href="#section4">04. Jump Straight to the Content Using the main Element</a>
+      <a href="#section5">05. Wrap Content in the article Element</a>
+      <a href="#section6">06. Make Screen Reader Navigation Easier with the header Landmark</a>
+      <a href="#section7">07. Make Screen Reader Navigation Easier with the nav Landmark</a>
+      <a href="#section8">08. Make Screen Reader Navigation Easier with the footer Landmark</a>
+      <a href="#section9">09. Improve Accessibility of Audio Content with the audio Element</a>
+      <a href="#section10">10. Improve Chart Accessibility with the figure Element</a>
+      <a href="#section11">11. Improve Form Field Accessibility with the label Element</a>
+      <a href="#section12">12. Wrap Radio Buttons in a fieldset Element for Better Accessibility</a>
+      <a href="#section13">13. Add an Accessible Date Picker</a>
+      <a href="#section14">14. Standardize Times with the HTML5 datetime Attribute</a>
+      <a href="#section15">15. Make Elements Only Visible to a Screen Reader by Using Custom CSS</a>
+      <a href="#section16">16. Improve Readability with High Contrast Text</a>
+      <a href="#section17">17. Avoid Colorblindness Issues by Using Sufficient Contrast</a>
+      <a href="#section18">18. Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information</a>
+      <a href="#section19">19. Give Links Meaning by Using Descriptive Link Text</a>
+      <a href="#section20">20. Make Links Navigatable with HTML Access Keys</a>
+      <a href="#section19">21. se tabindex to Add Keyboard Focus to an Element</a>
+      <a href="#section20">22. Use tabindex to Specify the Order of Keyboard Focus for Several Elements</a>
+    </aside>
+
+    <section id="main-section">
+    <h1>Applied Accessibility</h1>
+
+      <div class="box" id="section1">
+        <div class="section-title">
+          <h4>01. Add a Text Alternative to Images for Visually Impaired Accessibility</h4>
+        </div>
+          <div class="section-work">
+            <img src="doingKarateWow.jpeg" alt="Camper Cat doing karate">
+          </div>
+      </div>
+
+      <div class="box" id="section2">
+        <div class="section-title">
+          <h4>02. Know When Alt Text Should be Left Blank</h4>
+        </div>
+          <div class="section-work">
+            <h1>Deep Thoughts with Master Camper Cat</h1>
+            <article>
+              <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+              <p>To Come...</p>
+            </article>
+
+            <img src="samuraiSwords.jpeg" alt="">
+
+            <article>
+              <h2>Is Chuck Norris a Cat Person?</h2>
+              <p>To Come...</p>
+            </article>
+          </div>
+      </div>
+
+      <div class="box" id="section3">
+        <div class="section-title">
+          <h4>03. Use Headings to Show Hierarchical Relationships of Content</h4>
+        </div>
+          <div class="section-work">
+            <h1>How to Become a Ninja</h1>
+            <main>
+              <h2>Learn the Art of Moving Stealthily</h2>
+              <h3>How to Hide in Plain Sight</h5>
+              <h3>How to Climb a Wall</h5>
+
+              <h2>Learn the Art of Battle</h2>
+              <h3>How to Strengthen your Body</h5>
+              <h3>How to Fight like a Ninja</h5>
+
+              <h2>Learn the Art of Living with Honor</h2>
+              <h3>How to Breathe Properly</h5>
+              <h3>How to Simplify your Life</h5>
+            </main>
+          </div>
+      </div>
+
+      <div class="box" id="section4">
+        <div class="section-title">
+          <h4>04. Jump Straight to the Content Using the main Element</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Weapons of the Ninja</h1>
+            </header>
+
+            <main></main>
+
+            <footer></footer>
+          </div>
+      </div>
+
+      <div class="box" id="section5">
+        <div class="section-title">
+          <h4>05. Wrap Content in the article Element</h4>
+        </div>
+          <div class="section-work">
+            <h1>Deep Thoughts with Master Camper Cat</h1>
+            <main>
+              <article>
+                <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+                <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+              </article>
+
+              <img src="samuraiSwords.jpeg" alt="">
+
+              <article>
+                <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+                <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+              </article>
+
+              <img src="samuraiSwords.jpeg" alt="">
+
+              <article>
+                <h2>Is Chuck Norris a Cat Person?</h2>
+                <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+              </article>
+            </main>
+          </div>
+      </div>
+
+      <div class="box" id="section6">
+        <div class="section-title">
+          <h4>06. Make Screen Reader Navigation Easier with the header Landmark</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Training with Camper Cat</h1>
+            </header>
+            <main>
+              <section id="stealth">
+                <h2>Stealth &amp; Agility Training</h2>
+                <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+                <article><h3>No training is NP-complete without parkour</h3></article>
+              </section>
+              <section id="combat">
+                <h2>Combat Training</h2>
+                <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+                <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+              </section>
+              <section id="weapons">
+                <h2>Weapons Training</h2>
+                <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+                <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+              </section>
+            </main>
+
+          </div>
+      </div>
+
+      <div class="box" id="section7">
+        <div class="section-title">
+          <h4>07. Make Screen Reader Navigation Easier with the nav Landmark</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Training with Camper Cat</h1>
+
+              <nav>
+                <ul>
+                  <li><a href="#stealth">Stealth &amp; Agility</a></li>
+                  <li><a href="#combat">Combat</a></li>
+                  <li><a href="#weapons">Weapons</a></li>
+                </ul>
+              </nav>
+
+            </header>
+            <main>
+              <section id="stealth">
+                <h2>Stealth &amp; Agility Training</h2>
+                <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+                <article><h3>No training is NP-complete without parkour</h3></article>
+              </section>
+              <section id="combat">
+                <h2>Combat Training</h2>
+                <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+                <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+              </section>
+              <section id="weapons">
+                <h2>Weapons Training</h2>
+                <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+                <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+              </section>
+            </main>
+          </div>
+      </div>
+
+      <div class="box" id="section8">
+        <div class="section-title">
+          <h4>08. Make Screen Reader Navigation Easier with the footer Landmark</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Training</h1>
+              <nav>
+                <ul>
+                  <li><a href="#stealth">Stealth &amp; Agility</a></li>
+                  <li><a href="#combat">Combat</a></li>
+                  <li><a href="#weapons">Weapons</a></li>
+                </ul>
+              </nav>
+            </header>
+            <main>
+              <section id="stealth">
+                <h2>Stealth &amp; Agility Training</h2>
+                <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+                <article><h3>No training is NP-complete without parkour</h3></article>
+              </section>
+              <section id="combat">
+                <h2>Combat Training</h2>
+                <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+                <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+              </section>
+              <section id="weapons">
+                <h2>Weapons Training</h2>
+                <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+                <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+              </section>
+            </main>
+
+
+            <footer>&copy; 2016 Camper Cat</footer>
+          </div>
+      </div>
+
+      <div class="box" id="section9">
+        <div class="section-title">
+          <h4>09. Improve Accessibility of Audio Content with the audio Element</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Real Coding Ninjas</h1>
+            </header>
+            <main>
+              <p>A sound clip of Zersiax's screen reader in action.</p>
+
+              <audio controls>
+          <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg" />
+          </audio>
+
+            </main>
+          </div>
+      </div>
+
+      <div class="box" id="section10">
+        <div class="section-title">
+          <h4>10. Improve Chart Accessibility with the figure Element</h4>
+        </div>
+          <div class="section-work">
+          <header>
+            <h1>Training</h1>
+            <nav>
+              <ul>
+                <li><a href="#stealth">Stealth &amp; Agility</a></li>
+                <li><a href="#combat">Combat</a></li>
+                <li><a href="#weapons">Weapons</a></li>
+              </ul>
+            </nav>
+          </header>
+          <main>
+            <section>
+
+              <!-- Add your code below this line -->
+              <figure>
+                <!-- Stacked bar chart will go here -->
+                <br>
+                <figcaption>
+                  Breakdown per week of time to spend training in stealth, combat, and weapons.
+                </figcaption>
+              </figure>
+              <!-- Add your code above this line -->
+
+            </section>
+            <section id="stealth">
+              <h2>Stealth &amp; Agility Training</h2>
+              <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+              <article><h3>No training is NP-complete without parkour</h3></article>
+            </section>
+            <section id="combat">
+              <h2>Combat Training</h2>
+              <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+              <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+            </section>
+            <section id="weapons">
+              <h2>Weapons Training</h2>
+              <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+              <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+            </section>
+          </main>
+          <footer>&copy; 2016 Camper Cat</footer>
+          </div>
+      </div>
+
+      <div class="box" id="section11">
+        <div class="section-title">
+          <h4>11. Improve Form Field Accessibility with the label Element</h4>
+        </div>
+          <div class="section-work">
+          <header>
+            <h1>Deep Thoughts with Master Camper Cat</h1>
+          </header>
+          <section>
+            <form>
+              <p>Sign up to receive Camper Cat's blog posts by email here!</p>
+
+
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email">
+
+
+              <input type="submit" name="submit" value="Submit">
+            </form>
+          </section>
+          <article>
+            <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+            <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+          </article>
+          <img src="samuraiSwords.jpeg" alt="">
+          <article>
+            <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+            <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+          </article>
+          <img src="samuraiSwords.jpeg" alt="">
+          <article>
+            <h2>Is Chuck Norris a Cat Person?</h2>
+            <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+          </article>
+          <footer>&copy; 2016 Camper Cat</footer>
+          </div>
+      </div>
+
+      <div class="box" id="section12">
+        <div class="section-title">
+          <h4>12. Wrap Radio Buttons in a fieldset Element for Better Accessibility</h4>
+        </div>
+          <div class="section-work">
+
+          <header>
+            <h1>Deep Thoughts with Master Camper Cat</h1>
+          </header>
+          <section>
+            <form>
+              <p>Sign up to receive Camper Cat's blog posts by email here!</p>
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email">
+
+
+              <!-- Add your code below this line -->
+              <fieldset>
+                <legend>What level ninja are you?</legend>
+                <input id="newbie" type="radio" name="levels" value="newbie">
+                <label for="newbie">Newbie Kitten</label><br>
+                <input id="intermediate" type="radio" name="levels" value="intermediate">
+                <label for="intermediate">Developing Student</label><br>
+                <input id="master" type="radio" name="levels" value="master">
+                <label for="master">Master</label>
+              </fieldset>
+              <!-- Add your code above this line -->
+
+              <input type="submit" name="submit" value="Submit">
+            </form>
+          </section>
+          <article>
+            <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+            <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+          </article>
+          <img src="samuraiSwords.jpeg" alt="">
+          <article>
+            <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+            <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+          </article>
+          <img src="samuraiSwords.jpeg" alt="">
+          <article>
+            <h2>Is Chuck Norris a Cat Person?</h2>
+            <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+          </article>
+          <footer>&copy; 2016 Camper Cat</footer>
+
+          </div>
+      </div>
+
+      <div class="box" id="section13">
+        <div class="section-title">
+          <h4>13. Add an Accessible Date Picker</h4>
+        </div>
+          <div class="section-work">
+          <header>
+            <h1>Tournaments</h1>
+          </header>
+          <main>
+            <section>
+              <h2>Mortal Combat Tournament Survey</h2>
+              <form>
+                <p>Tell us the best date for the competition</p>
+                <label for="pickdate">Preferred Date:</label>
+
+                <!-- Add your code below this line -->
+              <input type="date" id="pickdate" name="date"></input>
+
+
+                <!-- Add your code above this line -->
+
+                <input type="submit" name="submit" value="Submit">
+              </form>
+            </section>
+          </main>
+          <footer>&copy; 2016 Camper Cat</footer>
+
+
+          </div>
+      </div>
+
+      <div class="box" id="section14">
+        <div class="section-title">
+          <h4>14. Standardize Times with the HTML5 datetime Attribute</h4>
+        </div>
+          <div class="section-work">
+
+            <header>
+              <h1>Tournaments</h1>
+            </header>
+            <article>
+              <h2>Mortal Combat Tournament Survey Results</h2>
+
+              <!-- Add your code below this line -->
+
+              <p>Thank you to everyone for responding to Master Camper Cat's survey. The best day to host the vaunted Mortal Combat tournament is <time datetime="2016-09-15">Thursday, September 15<sup>th</sup>.</time> May the best ninja win!</p>
+
+              <!-- Add your code above this line -->
+
+              <section>
+                <h3>Comments:</h3>
+                <article>
+                  <p>Posted by: Sub-Zero on <time datetime="2016-08-13T20:01Z">August 13<sup>th</sup></time></p>
+                  <p>Johnny Cage better be there, I'll finish him!</p>
+                </article>
+                <article>
+                  <p>Posted by: Doge on <time datetime="2016-08-15T08:12Z">August 15<sup>th</sup></time></p>
+                  <p>Wow, much combat, so mortal.</p>
+                </article>
+                <article>
+                  <p>Posted by: The Grim Reaper on <time datetime="2016-08-16T00:00Z">August 16<sup>th</sup></time></p>
+                  <p>Looks like I'll be busy that day.</p>
+                </article>
+              </section>
+            </article>
+            <footer>&copy; 2016 Camper Cat</footer>
+
+          </div>
+      </div>
+
+      <div class="box" id="section15">
+        <div class="section-title">
+          <h4>15. Make Elements Only Visible to a Screen Reader by Using Custom CSS</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Training</h1>
+              <nav>
+                <ul>
+                  <li><a href="#stealth">Stealth &amp; Agility</a></li>
+                  <li><a href="#combat">Combat</a></li>
+                  <li><a href="#weapons">Weapons</a></li>
+                </ul>
+              </nav>
+            </header>
+            <section>
+              <h2>Master Camper Cat's Beginner Three Week Training Program</h2>
+              <figure>
+                <!-- Stacked bar chart of weekly training-->
+                <p>[Stacked bar chart]</p>
+                <br />
+                <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+              </figure>
+              <table class="sr-only">
+                <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th scope="col">Stealth &amp; Agility</th>
+                    <th scope="col">Combat</th>
+                    <th scope="col">Weapons</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Week One</th>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Week Two</th>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Week Three</th>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>13</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section id="stealth">
+              <h2>Stealth &amp; Agility Training</h2>
+              <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+              <article><h3>No training is NP-complete without parkour</h3></article>
+            </section>
+            <section id="combat">
+              <h2>Combat Training</h2>
+              <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
+              <article><h3>Goodbye, world: 5 proven ways to knock out an opponent</h3></article>
+            </section>
+            <section id="weapons">
+              <h2>Weapons Training</h2>
+              <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
+              <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+            </section>
+            <footer>&copy; 2016 Camper Cat</footer>
+
+
+          </div>
+      </div>
+
+      <div class="box" id="section16">
+        <div class="section-title">
+          <h4>16. Improve Readability with High Contrast Text</h4>
+        </div>
+          <div class="section-work">
+            <header>
+            <h1>Deep Thoughts with Master Camper Cat</h1>
+          </header>
+          <article>
+            <h2>A Word on the Recent Catnip Doping Scandal</h2>
+            <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>
+            <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>
+          </article>
+          </div>
+      </div>
+
+      <div class="box" id="section17">
+        <div class="section-title">
+          <h4>17. Avoid Colorblindness Issues by Using Sufficient Contrast</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Deep Thoughts with Master Camper Cat</h1>
+            </header>
+            <article>
+              <h2>A Word on the Recent Catnip Doping Scandal</h2>
+              <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>
+              <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>
+            </article>
+          </div>
+      </div>
+
+      <div class="box" id="section18">
+        <div class="section-title">
+          <h4>18. Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Danger!</h1>
+            </header>
+            <button>Delete Internet</button>
+          </div>
+      </div>
+
+      <div class="box" id="section19">
+        <div class="section-title">
+          <h4>19. Give Links Meaning by Using Descriptive Link Text</h4>
+        </div>
+          <div class="section-work">
+
+            <header>
+              <h1>Deep Thoughts with Master Camper Cat</h1>
+            </header>
+            <article>
+              <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+              <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near. Click herefor <a href="">information about batteries</a> </p>
+            </article>
+
+          </div>
+      </div>
+
+      <div class="box" id="section20">
+        <div class="section-title">
+          <h4>20. Make Links Navigatable with HTML Access Keys</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <h1>Deep Thoughts with Master Camper Cat</h1>
+            </header>
+            <article>
+
+
+              <h2><a id="first" href="" accesskey="g">The Garfield Files: Lasagna as Training Fuel?</a></h2>
+
+
+              <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+            </article>
+            <article>
+
+
+              <h2><a id="second" href=""  accesskey="c">Is Chuck Norris a Cat Person?</a></h2>
+
+
+              <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+            </article>
+            <footer>&copy; 2016 Camper Cat</footer>
+          </div>
+      </div>
+
+      <div class="box" id="section21">
+        <div class="section-title">
+          <h4>21. Use tabindex to Add Keyboard Focus to an Element</h4>
+        </div>
+          <div class="section-work">
+
+            <header>
+              <h1>Ninja Survey</h1>
+            </header>
+            <section>
+              <form>
+
+
+                <p tabindex="0">Instructions: Fill in ALL your information then click <b>Submit</b></p>
+
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br>
+                <fieldset>
+                  <legend>What level ninja are you?</legend>
+                  <input id="newbie" type="radio" name="levels" value="newbie">
+                  <label for="newbie">Newbie Kitten</label><br>
+                  <input id="intermediate" type="radio" name="levels" value="intermediate">
+                  <label for="intermediate">Developing Student</label><br>
+                  <input id="master" type="radio" name="levels" value="master">
+                  <label for="master">9th Life Master</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                <legend>Select your favorite weapons:</legend>
+                <input id="stars" type="checkbox" name="weapons" value="stars">
+                <label for="stars">Throwing Stars</label><br>
+                <input id="nunchucks" type="checkbox" name="weapons" value="nunchucks">
+                <label for="nunchucks">Nunchucks</label><br>
+                <input id="sai" type="checkbox" name="weapons" value="sai">
+                <label for="sai">Sai Set</label><br>
+                <input id="sword" type="checkbox" name="weapons" value="sword">
+                <label for="sword">Sword</label>
+                </fieldset>
+                <br>
+                <input type="submit" name="submit" value="Submit">
+              </form><br>
+            </section>
+            <footer>&copy; 2016 Camper Cat</footer>
+
+          </div>
+      </div>
+
+      <div class="box" id="section22">
+        <div class="section-title">
+          <h4>22. Use tabindex to Specify the Order of Keyboard Focus for Several Elements</h4>
+        </div>
+          <div class="section-work">
+
+            <header>
+              <h1>Even Deeper Thoughts with Master Camper Cat</h1>
+              <nav>
+                <ul>
+                  <li><a href="">Home</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Training</a></li>
+                </ul>
+              </nav>
+            </header>
+            <form>
+              <label for="search">Search:</label>
+
+
+              <input type="search" name="search" id="search" tabindex="1">
+              <input type="submit" name="submit" value="Submit" id="submit" tabindex = "2">
+
+
+            </form>
+            <h2>Inspirational Quotes</h2>
+            <blockquote>
+              <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>
+              - Chuck Norris</p>
+            </blockquote>
+            <blockquote>
+              <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>
+              - TMNT</p>
+            </blockquote>
+            <footer>&copy; 2016 Camper Cat</footer>
+
+          </div>
+      </div>
+
+    </section>
+
+
+  </body>
+</html>

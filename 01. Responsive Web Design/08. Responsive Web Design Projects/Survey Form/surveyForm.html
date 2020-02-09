@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Build a Survey Form | FreeCodeCamp </title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Hind+Siliguri:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+
+    <form id="survey-form" action="">
+      <legend><p id="description">Let us know how we can improve freeCodeCamp</p></legend>
+      <div class="text-input-row">
+        <label  id="name-label" for="name"><small class="required">*</small>Name:</label>
+         <input id="name" type="text" placeholder="Enter your name" required>
+      </div>
+
+      <div class="text-input-row">
+       <label  id="email-label" for="email"><small class="required">*</small>E-mail:</label>
+        <input id="email" type="email" placeholder="Enter your Email" required>
+      </div>
+
+      <div class="text-input-row">
+        <label  id="number-label" for="number"><small class="required">*</small>Age:</label>
+         <input id="number" min="0" max="99" type="number" placeholder="Age" required>
+      </div>
+      <br>
+      <div class="text-input-row">
+          <label id="dropdown-label" for="dropdown">Which option best describes your current role?</label>
+         <select id="dropdown">
+          <option value="student">Student</option>
+          <option value="fullTimeJob">Full Time Job</option>
+          <option value="fullTimeLearner">Full Time Learner</option>
+          <option value="preferNotToSay">Prefer Not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="radio-input-row">
+        <label id="radio-label" for=""><small class="required">*</small>How likely is that you would recommend freeCodeCamp to a friend?</label>
+
+        <div class="container">
+          <label><input value="1" type="radio" name="radio-buttons" class="">Definitely</label>
+             <br>
+          <label><input value="2" type="radio" name="radio-buttons" class="">Maybe</label>
+             <br>
+          <label><input value="3" type="radio" name="radio-buttons" class="">Not Sure</label>
+        </div>
+      </div>
+      <br>
+
+      <div class="text-input-row">
+          <label id="dropdown-label" for="dropdown">What do you like most in FCC:</label>
+         <select id="dropdown">
+          <option value selected disabled>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="open source">Open Source</option>
+        </select>
+      </div>
+
+      <div class="checkbox-input-row">
+        <label id="checkbox-label" for="checkboxes" class="checkboxes">Things that should be improved in the future
+(Check all that apply):</label>
+
+        <div class="container">
+          <label for="indoor">
+            <input value="1" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Front-end Projects
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="2" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Back-end Projects
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="3" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Data Visualization
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="4" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Challenges
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="5" id="indoor" type="checkbox" name="indoor-outdoor">Open Source Community
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="6" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Gitter help rooms
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="7" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Videos
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="7" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Videos
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="7" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">City Meetups
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="7" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Wiki
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="7" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Forum
+          </label>
+          <br>
+          <label for="indoor">
+            <input value="7" id="indoor" type="checkbox" name="indoor-outdoor" class="checkboxes">Additional Courses
+          </label>
+        </div>
+      </div>
+
+    
+        <label id="comment-label" for="comments">Any Comments or Suggestions?</label>
+        <br>
+        <textarea id="comments" name="comments" rows="8" cols="80" placeholder="Enter your comments here..."></textarea>
+
+
+      <div class="row">
+         <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+    <footer>
+      <p class="end-tag"><a target="_blank" href="https://twitter.com/AlxCrmr">Written and coded by AlxCrmr 2018</a></p>
+    </footer>
+
+  </body>
+</html>

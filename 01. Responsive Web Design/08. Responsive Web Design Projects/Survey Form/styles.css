@@ -1,0 +1,197 @@
+:root {
+  --background-red:#D43F41;
+  --background-off-white:#F2F3EE ;
+  --button-red: #BF2024;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  background: var(--background-off-white, #F2F3EE);
+  font-size: 16px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 300;
+}
+form{
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  display: block;
+  background: #f9f9f7;
+  height: 100px;
+  position: relative;
+  top:-25px;
+  text-align: center;
+  line-height: 90px;
+  font-family: 'Black Ops One', cursive;
+}
+h1:before {
+  background: var(--background-red, #D43F41);
+  height: 10px;
+  display: block;
+  content: "";
+}
+button {
+  background: var(--button-red, #BF2024);
+  border: none;
+  width: 120px;
+  height: 50px;
+  color: #FFF;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+
+}
+button:hover {
+  background: var(--background-red,#D43F41);
+  cursor: pointer;
+}
+
+#description, #name-label, #email-label, #number-label, #radio-label, #dropdown-label,#checkbox-label, #comment-label {
+  font-weight: 600;
+}
+
+#description {
+  font-size: 1.2em;
+  text-align: center;
+}
+.text-input-row {
+  display: grid;
+  grid-template-columns: 50% 50% ;
+  grid-template-rows: 30px;
+  grid-gap: 10px;
+}
+.radio-input-row {
+  display: grid;
+  grid-template-columns: 50% 70%  ;
+  grid-template-rows: 80px;
+  grid-gap: 0px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.checkbox-input-row {
+  display: grid;
+  grid-template-columns: 50% 70%  ;
+  grid-template-rows: 330px;
+  grid-gap: 0px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.required {
+  position: relative;
+  bottom: 3px;
+  right: 3px;
+}
+
+input[type='text'], input[type='email'], input[type='number'] {
+    width: 300px;
+    height: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 2.5px;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  margin: 0 10px 10px 25px;
+}
+#dropdown {
+  width: 300px;
+  padding: 2.5px 10px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+textarea{
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family: 'Hind Siliguri', sans-serif;
+  height: 100px;
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: var(--background-red, #D43F41);
+  height: 50px;
+}
+
+footer a {
+  color: var(--background-off-white, #F2F3EE);
+  text-decoration: none;
+}
+footer a:hover {
+  color: #FFF;
+
+}
+footer p {
+  text-align: center;
+  line-height: 30px;
+  font-size: .8em;
+}
+
+
+@media only screen and (max-width: 1104px) {
+
+form {
+  width: 90%;
+}
+  .text-input-row {
+    grid-template-columns: 100% ;
+    grid-template-rows: 15px;
+    justify-items: center;
+  }
+  .radio-input-row {
+    grid-template-columns: 100%  ;
+    grid-template-rows: 40px;
+    justify-items: center;
+  }
+  .checkbox-input-row {
+    grid-template-columns: 100%   ;
+    grid-template-rows: 40px;
+    justify-items: center;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 566px) {
+  .radio-input-row, .checkbox-input-row {
+    grid-template-rows: 70px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .text-input-row {
+    grid-template-rows: 30px;
+  }
+  .radio-input-row, .checkbox-input-row {
+    grid-template-rows: 60px;
+  }
+  input[type='text'], input[type='email'], input[type='number'] {
+      width: 280px;
+      position: relative;
+      bottom: 20px;
+  }
+
+}
+@media only screen and (max-width: 368px) {
+  .text-input-row {
+    grid-template-rows: 40px;
+  }
+  .radio-input-row, .checkbox-input-row {
+    grid-template-rows: 60px;
+  }
+}

@@ -1,0 +1,26 @@
+html,body{
+    font-size: 16px;
+    background-color: #303E58;
+    color:#FFF;
+}
+
+.form-control:focus {
+    border-color: #C3595B;
+  box-shadow: 0 1px 1px rgba(190, 88, 90,.75) inset, 0 0 8px rgba(190, 88, 90,.75);
+  outline: 0 none;
+}
+footer {
+    background-color: rgb(190, 88, 90);
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+footer a {
+    color: #FFF;
+}
+
+footer a:hover {
+    color: #303E58;
+    text-decoration: none;
+}

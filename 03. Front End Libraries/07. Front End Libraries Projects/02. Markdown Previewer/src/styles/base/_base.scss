@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #c8d5b9;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media only screen and (max-height: 940px) {
+  body {
+    overflow: auto;
+    max-height: 94rem;
+    height: 100%;
+  }
+}

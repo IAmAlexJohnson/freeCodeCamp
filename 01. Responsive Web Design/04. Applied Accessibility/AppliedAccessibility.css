@@ -1,0 +1,35 @@
+
+#section6 section, #section7 section, #section8 section, #section10 section, #section13 section, #section14 section, #section15 section, #section21 section  {
+  float: none;
+  width: 100%;
+}
+
+#section15 .sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+#section16 {
+    color: #636363;
+    background-color: #FFF;
+}
+
+#section17 {
+    color: hsl(0, 55%, 15%);
+    background-color: hsl(120, 25%, 55%);
+  }
+
+#section18 button {
+    color: #003366;
+    background-color: #FFFF33;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #section19 p:focus {
+    background-color: yellow;
+  }

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 85.8rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-wrap: none;
+    flex-direction: column;
+    max-height: none;
+    width: 100%;
+  }
+}

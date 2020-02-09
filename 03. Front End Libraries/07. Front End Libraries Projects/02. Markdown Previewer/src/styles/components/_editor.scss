@@ -1,0 +1,32 @@
+#editor__container {
+  padding-left: 3rem;
+  width: 47%;
+}
+
+#editor {
+  background: $off-white;
+  font-size: 1.3em;
+  height: 85%;
+  padding: 3rem;
+  resize: none;
+  width: 93.1%;
+  width: calc(96.5% - 3rem);
+}
+
+@media only screen and (max-width: 1500px) {
+  #editor__container {
+    width: 45%;
+  }
+  #editor {
+    width: 90%;
+    width: calc(94.5% - 3rem);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #editor__container {
+    height: 50rem;
+    width: 90%;
+    margin: 0 auto 5rem;
+  }
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>freeCodeCamp | CSS Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cssflexbox.css">
+  </head>
+  <body>
+
+    <aside id="sidebar">
+      <a href="#section1">01. flex to Position Two Boxes</a>
+      <a href="#section2">02. Add Flex Superpowers to the Tweet Embed</a>
+      <a href="#section3">03. Use the flex-direction Property to Make a Row</a>
+      <a href="#section4">04.  Apply the flex-direction Property to Create Rows in the Tweet Embed</a>
+      <a href="#section5">05. Use the flex-direction Property to Make a Column</a>
+      <a href="#section6">06. Apply the flex-direction Property to Create a Column in the Tweet Embed</a>
+      <a href="#section7">07. Align Elements Using the justify-content Property</a>
+      <a href="#section8">08. Use the justify-content Property in the Tweet Embed</a>
+      <a href="#section9">09. Align Elements Using the align-items Property</a>
+      <a href="#section10">10. Use the align-items Property in the Tweet Embed</a>
+      <a href="#section11">11. Use the flex-wrap Property to Wrap a Row or Column</a>
+      <a href="#section12">12. Use the flex-shrink Property to Shrink Items</a>
+      <a href="#section13">13. Use the flex-grow Property to Expand Items</a>
+      <a href="#section14">14. Use the flex-basis Property to Set the Initial Size of an Item</a>
+      <a href="#section15">15. Use the flex Shorthand Property</a>
+      <a href="#section16">16. Use the order Property to Rearrange Items</a>
+      <a href="#section17">17. Use the align-self Property</a>
+    </aside>
+
+    <section id="main-section">
+      <h1>CSS Flexbox</h1>
+
+        <div class="box" id="section1">
+          <div class="section-title">
+            <h4>01. flex to Position Two Boxes</h4>
+          </div>
+            <div class="section-work">
+              <div id="box-container">
+                <div id="box-1"></div>
+                <div id="box-2"></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="box" id="section2">
+          <div class="section-title">
+            <h4>02. Add Flex Superpowers to the Tweet Embed</h4>
+          </div>
+            <div class="section-work">
+
+              <header>
+                <img src="https://pbs.twimg.com/profile_images/378800000147359764/54dc9a5c34e912f34db8662d53d16a39_400x400.png" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+                <div class="profile-name">
+                  <h3>Quincy Larson</h3>
+                  <h4>@ossia</h4>
+                </div>
+                <div class="follow-btn">
+                  <button>Follow</button>
+                </div>
+              </header>
+              <div id="inner">
+                <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+                <span class="date">1:32 PM - 12 Jan 2018</span>
+                <hr>
+              </div>
+              <footer>
+                <div class="stats">
+                  <div class="Retweets">
+                    <strong>107</strong> Retweets
+                  </div>
+                  <div class="likes">
+                    <strong>431</strong> Likes
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="share-btn">Share</button>
+                  <button class="retweet-btn">Retweet</button>
+                  <button class="like-btn">Like</button>
+                </div>
+              </footer>
+            </div>
+        </div>
+
+        <div class="box" id="section3">
+          <div class="section-title">
+            <h4>03. Use the flex-direction Property to Make a Row</h4>
+          </div>
+            <div class="section-work">
+              <div id="box-container">
+                <div id="box-1"></div>
+                <div id="box-2"></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="box" id="section4">
+          <div class="section-title">
+            <h4>04. Apply the flex-direction Property to Create Rows in the Tweet Embed</h4>
+          </div>
+            <div class="section-work">
+              <header>
+                <img src="https://pbs.twimg.com/profile_images/378800000147359764/54dc9a5c34e912f34db8662d53d16a39_400x400.png" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+                <div class="profile-name">
+                  <h3>Quincy Larson</h3>
+                  <h4>@ossia</h4>
+                </div>
+                <div class="follow-btn">
+                  <button>Follow</button>
+                </div>
+              </header>
+              <div id="inner">
+                <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+                <span class="date">1:32 PM - 12 Jan 2018</span>
+                <hr>
+              </div>
+              <footer>
+                <div class="stats">
+                  <div class="Retweets">
+                    <strong>107</strong> Retweets
+                  </div>
+                  <div class="likes">
+                    <strong>431</strong> Likes
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="share-btn">Share</button>
+                  <button class="retweet-btn">Retweet</button>
+                  <button class="like-btn">Like</button>
+                </div>
+              </footer>
+
+            </div>
+        </div>
+
+        <div class="box" id="section5">
+          <div class="section-title">
+            <h4>05. Use the flex-direction Property to Make a Column</h4>
+          </div>
+            <div class="section-work">
+              <div id="box-container">
+                <div id="box-1"></div>
+                <div id="box-2"></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="box" id="section6">
+          <div class="section-title">
+            <h4>06. Apply the flex-direction Property to Create a Column in the Tweet Embed</h4>
+          </div>
+            <div class="section-work">
+              <header>
+                <img src="https://pbs.twimg.com/profile_images/378800000147359764/54dc9a5c34e912f34db8662d53d16a39_400x400.png" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+                <div class="profile-name">
+                  <h3>Quincy Larson</h3>
+                  <h4>@ossia</h4>
+                </div>
+                <div class="follow-btn">
+                  <button>Follow</button>
+                </div>
+              </header>
+              <div id="inner">
+                <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+                <span class="date">1:32 PM - 12 Jan 2018</span>
+                <hr>
+              </div>
+              <footer>
+                <div class="stats">
+                  <div class="Retweets">
+                    <strong>107</strong> Retweets
+                  </div>
+                  <div class="likes">
+                    <strong>431</strong> Likes
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="share-btn">Share</button>
+                  <button class="retweet-btn">Retweet</button>
+                  <button class="like-btn">Like</button>
+                </div>
+              </footer>
+
+            </div>
+        </div>
+
+
+      <div class="box" id="section7">
+        <div class="section-title">
+          <h4>07. Align Elements Using the justify-content Property</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+          </div>
+      </div>
+
+      <div class="box" id="section8">
+        <div class="section-title">
+          <h4>08. Use the justify-content Property in the Tweet Embed</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <img src="https://pbs.twimg.com/profile_images/378800000147359764/54dc9a5c34e912f34db8662d53d16a39_400x400.png" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+              <div class="profile-name">
+                <h3>Quincy Larson</h3>
+                <h4>@ossia</h4>
+              </div>
+              <div class="follow-btn">
+                <button>Follow</button>
+              </div>
+            </header>
+            <div id="inner">
+              <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+              <span class="date">1:32 PM - 12 Jan 2018</span>
+              <hr>
+            </div>
+            <footer>
+              <div class="stats">
+                <div class="Retweets">
+                  <strong>107</strong> Retweets
+                </div>
+                <div class="likes">
+                  <strong>431</strong> Likes
+                </div>
+              </div>
+              <div class="cta">
+                <button class="share-btn">Share</button>
+                <button class="retweet-btn">Retweet</button>
+                <button class="like-btn">Like</button>
+              </div>
+            </footer>
+
+          </div>
+      </div>
+
+      <div class="box" id="section9">
+        <div class="section-title">
+          <h4>09. Align Elements Using the align-items Property</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"><p>Hello</p></div>
+              <div id="box-2"><p>Goodbye</p></div>
+            </div>
+          </div>
+      </div>
+
+      <div class="box" id="section10">
+        <div class="section-title">
+          <h4>10. Use the align-items Property in the Tweet Embed</h4>
+        </div>
+          <div class="section-work">
+            <header>
+              <img src="https://pbs.twimg.com/profile_images/378800000147359764/54dc9a5c34e912f34db8662d53d16a39_400x400.png" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+              <div class="profile-name">
+                <h3>Quincy Larson</h3>
+                <h4>@ossia</h4>
+              </div>
+              <div class="follow-btn">
+                <button>Follow</button>
+              </div>
+            </header>
+            <div id="inner">
+              <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+              <span class="date">1:32 PM - 12 Jan 2018</span>
+              <hr>
+            </div>
+            <footer>
+              <div class="stats">
+                <div class="Retweets">
+                  <strong>107</strong> Retweets
+                </div>
+                <div class="likes">
+                  <strong>431</strong> Likes
+                </div>
+              </div>
+              <div class="cta">
+                <button class="share-btn">Share</button>
+                <button class="retweet-btn">Retweet</button>
+                <button class="like-btn">Like</button>
+              </div>
+            </footer>
+
+          </div>
+      </div>
+
+      <div class="box" id="section11">
+        <div class="section-title">
+          <h4>11. Use the flex-wrap Property to Wrap a Row or Column</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+              <div id="box-3"></div>
+              <div id="box-4"></div>
+              <div id="box-5"></div>
+              <div id="box-6"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="box" id="section12">
+        <div class="section-title">
+          <h4>12. Use the flex-shrink Property to Shrink Items</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="box" id="section13">
+        <div class="section-title">
+          <h4>13. Use the flex-grow Property to Expand Items</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="box" id="section14">
+        <div class="section-title">
+          <h4>14. Use the flex-basis Property to Set the Initial Size of an Item</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="box" id="section15">
+        <div class="section-title">
+          <h4>15. Use the flex Shorthand Property</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="box" id="section16">
+        <div class="section-title">
+          <h4>16. Use the order Property to Rearrange Items</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="box" id="section17">
+        <div class="section-title">
+          <h4>17. Use the align-self Property</h4>
+        </div>
+          <div class="section-work">
+            <div id="box-container">
+              <div id="box-1"></div>
+              <div id="box-2"></div>
+            </div>
+
+          </div>
+      </div>
+
+    </section>
+
+  </body>
+</html>

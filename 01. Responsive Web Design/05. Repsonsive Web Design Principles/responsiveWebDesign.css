@@ -1,0 +1,30 @@
+#section1 p {
+    font-size: 20px;
+  }
+
+  /* Add media query below */
+
+  @media (max-height: 800px) {
+     /* CSS Rules */
+     #section1 p {
+        font-size: 10px;
+     }
+  }
+
+#section2 img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+#section3 img {
+    width: 100px;
+    height: 100px;
+  }
+
+#section4  h2 {
+      width: 80vw;
+  }
+#section4  p {
+      width: 75vmin;
+  }

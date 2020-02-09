@@ -1,0 +1,518 @@
+/* ===== #section1 ===== */
+#section1 #box-container {
+    height: 500px;
+    display:flex;
+  }
+
+#section1 #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+#section1 #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+
+/* ===== #section2 ===== */
+  #section2 {
+    font-family: Arial, sans-serif;
+  }
+  #section2 header {
+    display:flex;
+  }
+  #section2 header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  #section2 header .profile-name {
+    display:flex;
+    margin-left: 10px;
+  }
+  #section2 header .follow-btn {
+    display:flex;
+    margin: 0 0 0 auto;
+  }
+  #section2 header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  #section2 header h3, header h4 {
+    display:flex;
+    margin: 0;
+  }
+  #section2 #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #section2 #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  #section2 footer {
+    display:flex;
+  }
+  #section2 footer .stats {
+    display:flex;
+    font-size: 15px;
+  }
+  #section2 footer .stats strong {
+    font-size: 18px;
+  }
+  #section2 footer .stats .likes {
+    margin-left: 10px;
+  }
+  #section2 footer .cta {
+    margin-left: auto;
+  }
+  #section2 footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+/* ===== #section3 ===== */
+  #section3 #box-container {
+    display: flex;
+    height: 500px;
+    flex-direction: row-reverse;
+  }
+  #section3 #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #section3 #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+/* ===== #section4 ===== */
+  #section4 {
+    font-family: Arial, sans-serif;
+  }
+  #section4 header {
+    display: flex;
+    flex-direction: row;
+  }
+  #section4 header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  #section4 header .profile-name {
+    display: flex;
+    margin-left: 10px;
+  }
+  #section4 header .follow-btn {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+  #section4 header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  #section4 header h3, header h4 {
+    display: flex;
+    margin: 0;
+  }
+  #section4 #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #section4 #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  #section4 footer {
+    display: flex;
+    flex-direction: row;
+  }
+  #section4 footer .stats {
+    display: flex;
+    font-size: 15px;
+  }
+  #section4 footer .stats strong {
+    font-size: 18px;
+  }
+  #section4 footer .stats .likes {
+    margin-left: 10px;
+  }
+  #section4 footer .cta {
+    margin-left: auto;
+  }
+  #section4 footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+/* ===== #section5 ===== */
+  #section5 #box-container {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+  }
+  #section5 #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #section5 #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+/* ===== #section6 ===== */
+  #section6 {
+    font-family: Arial, sans-serif;
+  }
+  #section6 header, #section6 footer {
+    display: flex;
+    flex-direction: row;
+  }
+  #section6 header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  #section6 header .profile-name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  #section6 header .follow-btn {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+  #section6 header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  #section6 header h3, header h4 {
+    display: flex;
+    margin: 0;
+  }
+  #section6 #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #section6 #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  #section6 footer .stats {
+    display: flex;
+    font-size: 15px;
+  }
+  #section6 footer .stats strong {
+    font-size: 18px;
+  }
+  #section6 footer .stats .likes {
+    margin-left: 10px;
+  }
+  #section6 footer .cta {
+    margin-left: auto;
+  }
+  #section6 footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+/* ===== #section7 ===== */
+  #section7 #box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+  }
+  #section7 #box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 100%;
+  }
+
+  #section7 #box-2 {
+    background-color: orangered;
+    width: 25%;
+    height: 100%;
+  }
+/* ===== #section8 ===== */
+  #section8 {
+    font-family: Arial, sans-serif;
+  }
+  #section8 header, #section8 footer {
+    display: flex;
+    flex-direction: row;
+  }
+  #section8 header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  #section8 header .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+  #section8 header .follow-btn {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+  #section8 header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  #section8 header h3, header h4 {
+    display: flex;
+    margin: 0;
+  }
+  #section8 #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #section8 #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  #section8 footer .stats {
+    display: flex;
+    font-size: 15px;
+  }
+  #section8 footer .stats strong {
+    font-size: 18px;
+  }
+  #section8 footer .stats .likes {
+    margin-left: 10px;
+  }
+  #section8 footer .cta {
+    margin-left: auto;
+  }
+  #section8 footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+/* ===== #section9 ===== */
+  #section9 #box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+    align-items: center;
+  }
+  #section9 #box-1 {
+    background-color: dodgerblue;
+    width: 200px;
+    font-size: 24px;
+  }
+
+  #section9 #box-2 {
+    background-color: orangered;
+    width: 200px;
+    font-size: 18px;
+  }
+/* ===== #section10 ===== */
+  #section10 {
+    font-family: Arial, sans-serif;
+  }
+  #section10 header, #section10 footer {
+    display: flex;
+    flex-direction: row;
+  }
+  #section10 header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  #section10 header .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  #section10 header .follow-btn {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+  }
+  #section10 header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  #section10 header h3, header h4 {
+    display: flex;
+    align-items:center;
+    margin: 0;
+  }
+  #section10 #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #section10 #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  #section10 footer .stats {
+    display: flex;
+    font-size: 15px;
+  }
+  #section10 footer .stats strong {
+    font-size: 18px;
+  }
+  #section10 footer .stats .likes {
+    margin-left: 10px;
+  }
+  #section10 footer .cta {
+    margin-left: auto;
+  }
+  #section10 footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+/* ===== #section11 ===== */
+  #section11 #box-container {
+    background: gray;
+    display: flex;
+    height: 200px;
+    flex-wrap:wrap;
+  }
+  #section11 #box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 50%;
+  }
+  #section11 #box-2 {
+    background-color: orangered;
+    width: 25%;
+    height: 50%;
+  }
+  #section11 #box-3 {
+    background-color: violet;
+    width: 25%;
+    height: 50%;
+  }
+  #section11 #box-4 {
+    background-color: yellow;
+    width: 25%;
+    height: 50%;
+  }
+  #section11 #box-5 {
+    background-color: green;
+    width: 25%;
+    height: 50%;
+  }
+  #section11 #box-6 {
+    background-color: black;
+    width: 25%;
+    height: 50%;
+  }
+/* ===== #section12 ===== */
+   #section12 #box-container {
+    display: flex;
+    height: 500px;
+  }
+   #section12 #box-1 {
+    background-color: dodgerblue;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 1;
+  }
+
+   #section12 #box-2 {
+    background-color: orangered;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 2;
+  }
+  /* ===== #section13 ===== */
+  #section13 #box-container {
+    display: flex;
+    height: 500px;
+  }
+
+  #section13 #box-1 {
+    background-color: dodgerblue;
+    height: 200px;
+    flex-grow:1;
+  }
+
+  #section13 #box-2 {
+    background-color: orangered;
+    height: 200px;
+    flex-grow:2;
+  }
+/* ===== #section14 ===== */
+  #section14 #box-container {
+    display: flex;
+    height: 500px;
+  }
+
+  #section14 #box-1 {
+    background-color: dodgerblue;
+    height: 200px;
+    flex-basis: 10em;
+  }
+
+  #section14 #box-2 {
+    background-color: orangered;
+    height: 200px;
+    flex-basis: 20em;
+  }
+/* ===== #section15 ===== */
+ #section15 #box-1 {
+    background-color: dodgerblue;
+    flex: 2 2 150px;
+    height: 200px;
+  }
+
+  #section15 #box-2 {
+    background-color: orangered;
+    flex: 1 1 150px;
+    height: 200px;
+  }
+/* ===== #section16 ===== */
+  #section16  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #section16  #box-1 {
+    background-color: dodgerblue;
+    order: 2;
+    height: 200px;
+    width: 200px;
+  }
+
+  #section16  #box-2 {
+    background-color: orangered;
+    order: 1;
+    height: 200px;
+    width: 200px;
+  }
+/* ===== #section17 ===== */
+  #section17 #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #section17 #box-1 {
+    background-color: dodgerblue;
+    align-self: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  #section17 #box-2 {
+    background-color: orangered;
+    align-self: flex-end;
+    height: 200px;
+    width: 200px;
+  }

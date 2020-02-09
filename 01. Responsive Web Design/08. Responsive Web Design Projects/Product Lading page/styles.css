@@ -1,0 +1,501 @@
+:root {
+  --background-blue: #18366C;
+  --secondary-blue: #a8bcdd;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  z-index: 1;
+  background: var(--background-blue, #18366C);
+}
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 9999 !important;
+}
+#nav-bar{
+  height: 100px;
+  color: #FFF;
+  background: var(--background-blue, #18366C);
+}
+
+#nav-bar ul a li {
+  list-style: none;
+  padding: 0 50px;
+  text-transform: uppercase;
+  float: left;
+  line-height: 100px;
+}
+#nav-bar ul a li:hover {
+  color: var(--secondary-blue, #a8bcdd);
+}
+nav a  {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+#nav-bar ul {
+  margin: 0;
+  display: inline-block;
+  float: right;
+}
+
+header {
+  height: 800px;
+  width: 100%;
+  background: var(--background-blue, #18366C);
+  position: relative;
+
+}
+#header::after {
+  content: "";
+  width: 100%;
+  height: 1500px;
+  -webkit-clip-path: polygon(0 33%, 100% 0%, 100% 40%, 0 43.5%);
+  clip-path: polygon(0 33%, 100% 0%, 100% 40%, 0 43.5%);
+  background: var(--secondary-blue, #a8bcdd);
+  position: absolute;
+  top: 300px;
+}
+#header-img {
+  height: 100px;
+  width: auto;
+  display: inline;
+}
+nav a h1 {
+  display: inline;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-family: 'Do Hyeon', sans-serif;
+  position: relative;
+  bottom: 30px;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 0px #6e91c9, 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+#logo {
+  width: 500px;
+  height: 100px;
+  margin-left: 50px;
+}
+
+#intro {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+#intro h2 {
+  font-size: 3em;
+  text-shadow: 3px 3px 0px #6e91c9, 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+#intro h2, #intro h3 {
+  position: relative;
+  top: 200px;
+  margin:0;
+}
+#intro h3 {
+  font-weight: 300;
+}
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+}
+
+#video {
+  position: relative;
+  top: 200px;
+  border: 15px solid #FFF;
+  box-shadow: 3px 3px 0px #6e91c9, 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+#signUp {
+  width: 100%;
+  height: 150px;
+  background: #FFF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+
+form #email {
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+}
+form #submit {
+  height: 35px;
+  width: 100px;
+  background: #8823fc;
+  color:#FFF;
+  border: none;
+  font-size: 1em;
+}
+form #submit:hover {
+  background: hsl(268, 97%, 66%);
+  cursor: pointer;
+}
+form {
+  padding-bottom: 10px;
+}
+#features{
+  position: relative;
+  z-index: 1;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#features p {
+  font-size: 1.5em;
+  text-align: center;
+
+}
+#features ul {
+ margin-top: 20px;
+}
+
+#features h4 {
+  font-size: 2em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#uses-container p {
+  font-size: 1em;
+}
+#uses-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+#uses-container .column {
+    flex: 30%;
+    max-width: 30%;
+    padding: 0 10px;
+}
+#uses-container .column img {
+    margin-top: 10px;
+    vertical-align: middle;
+}
+#pricing{
+  position: relative;
+  z-index: 1;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20%;
+  text-align: center;
+}
+
+#pricing .price-box {
+  width: 30%;
+  height: 400px;
+  box-shadow: 3px 3px 0px #6e91c9, 8px 8px 0px rgba(0, 0, 0, 0.1);
+  background: #ced8e8;
+  color: #555;
+}
+#pricing .price-box::before {
+  height: 70px;
+  width: 100%;
+  background: var(--secondary-blue, #a8bcdd);
+  display: block;
+  content: "";
+}
+#pricing .price-box span {
+  position: relative;
+  bottom: 50px;
+  font-size: 1.5em;
+}
+
+#pricing .price-box:hover {
+  box-shadow: 3px 3px 0px #b17fe2, 8px 8px 0px rgba(0, 0, 0, 0.1);
+  background: #dce5f2;
+  cursor: pointer;
+  color: #333;
+}
+#pricing .price-box:hover::before{
+  background: #8823fc;
+}
+#pricing ul {
+  list-style: none;
+  position: relative;
+  top: -30px;
+  right: 10px;
+}
+#pricing ul li {
+  margin-bottom: 5px;
+}
+#pricing ul li.price {
+  font-size: 3em;
+}
+#pricing ul li strong {
+  padding-right: 10px;
+}
+#pricing button{
+  width: 130px;
+  border: none;
+  color: #FFF;
+  height: 40px;
+  background:#8823fc ;
+  cursor: pointer;
+}
+#pricing button:hover{
+  background: var(--background-blue, #18366C);
+}
+.disclaimer {
+  width: 100%;
+}
+.disclaimer p{
+  text-align: center;
+  padding: 0 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.disclaimer p a{
+  text-decoration: none;
+  color: #FFF;
+}
+.disclaimer p a:hover{
+  color: #8823fc;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: var(--secondary-blue, #a8bcdd);
+  height: 100px;
+  width: 100%;
+}
+footer ul{
+  list-style: none;
+  line-height: 60px;
+}
+footer ul li{
+  float: left;
+  padding-right: 20px;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #FFF;
+}
+footer ul li a:hover{
+  color: #555;
+}
+footer p {
+  text-align: center;
+  line-height: 90px;
+  margin-left: 600px;
+}
+footer .end-tag a{
+  font-weight: 300;
+  color:#333;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+footer .end-tag a:hover{
+  color:#FFF;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  #pricing{
+    padding: 0 10%;
+  }
+  footer p {
+    margin-left: 400px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #nav-bar ul a li {
+    padding: 0 30px;
+  }
+  #pricing{
+    padding: 0 5%;
+  }
+  footer p {
+    margin-left: 200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #nav-bar ul a li {
+    padding: 0 20px;
+  }
+  #pricing{
+    padding: 0 5%;
+  }
+  footer ul{
+    float: none;
+    margin-right: 0px;
+    line-height: 10px;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+  }
+  footer p {
+    display: inline-block;
+    line-height: 10px;
+    margin-left: 0px;
+    position: relative;
+    bottom: -15px;
+    right: 135px;
+  }
+  footer{
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #pricing{
+    position: relative;
+    z-index: 1;
+    height: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding: 0 0%;
+  }
+  #pricing .price-box {
+    vertical-align: middle;
+    flex: 60%;
+    max-width: 60%;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #nav-bar{
+    height: 150px;
+    text-align: center;
+  }
+  #nav-bar ul a li {
+  height: 1em;
+  position: relative;
+  bottom: 40px;
+  }
+  #nav-bar ul {
+    display: flex;
+    justify-content: center;
+    float: none;
+    width: 100%;
+  }
+  #logo {
+    height: 70px;
+  }
+
+}
+@media only screen and (max-width: 599px) {
+  #video {
+    width: 90%;
+  }
+  #uses-container .column {
+      flex: 50%;
+      max-width: 50%;
+      padding: 0 25%;
+  }
+  #uses-container p {
+    display: inline-block;
+  }
+  .disclaimer p{
+    padding: 0 10% 30px;
+  }
+}
+
+@media only screen and (max-width: 492px) {
+  #pricing{;
+    height: 1300px;
+  }
+  #pricing .price-box {
+    flex: 90%;
+    max-width: 90%;
+    margin-bottom: 10px;
+
+  }
+  footer, footer ul, footer ul li, footer p, footer p a{
+    WIDTH: 100%;
+  }
+  footer {
+    height: 140px;
+    text-align: center;
+  }
+  footer ul {
+    padding: 0;
+  }
+  footer ul li {
+    padding-bottom: 15px;
+  }
+  footer p {
+    bottom: -40px;
+    font-size: .8em;
+    right: 110px;
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  #logo {
+    position: relative;
+    right: 30px;
+    }
+  #nav-bar ul a li {
+  right: 40px;
+  }
+  #signUp {
+    height: 200px;
+  }
+  form #submit {
+    margin-top: 20px;
+  }
+  footer p {
+    bottom: -40px;
+    font-size: .8em;
+    right: 65px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  #nav-bar {
+    height: 230px;
+  }
+  nav a h1 {
+    bottom: 10px;
+    left: 30px;
+  }
+  #nav-bar ul a li {
+  bottom: 10px;
+  }
+  header {
+    height: 850px;
+  }
+  #intro {
+    position: relative;
+    top: 50px;
+  }
+  #features {
+    padding: 0 10%;
+  }
+}

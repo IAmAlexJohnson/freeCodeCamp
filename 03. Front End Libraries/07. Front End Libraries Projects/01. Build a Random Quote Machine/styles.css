@@ -1,0 +1,123 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  color: #333;
+  overflow-y: hidden;
+}
+body {
+  background-color: #FCFCFC;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+wrapper#quote-box, wrapper#button-box {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+wrapper#quote-box {
+  height: auto;
+  background-color: #FFF;
+  border: 2px solid #E18A07;
+  padding: 3%;
+  font-size: 1.3em;
+  text-align: center;
+  font-family: 'Coming Soon', cursive;
+}
+wrapper#quote-box .button-container {
+  text-align: center;
+}
+wrapper#quote-box .button-container button {
+  margin: 0 15%;
+}
+p#author, p#citation {
+  margin-top: 0;
+  margin-bottom: 50px;
+  display: inline-block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+}
+
+p#author::before {
+  content: "- ";
+}
+p#author::after {
+  content: " , ";
+  padding-right: 10px;
+}
+wrapper#button-box {
+  margin-top: 0px;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+wrapper#button-box button {
+  margin-left: 1%;
+}
+footer {
+  width: 100%;
+  text-align: center;
+}
+footer p {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+footer a {
+  color: #E18A07;
+  text-decoration: none;
+}
+footer a:hover {
+  color: gold;
+}
+a#tweet-quote {
+  text-decoration: none;
+}
+button {
+  text-transform: uppercase;
+  width: 175px;
+  height: 40px;
+  background-color: #FFF;
+  border: 2px solid #E18A07;
+  color: #333;
+  outline-color: gold;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #E18A07;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.active-btn{
+  background-color: #E18A07;
+  color: #FFF;
+}
+
+/* ======== MEDIA QUERIES ========= */
+@media only screen and (max-width: 1875px) {
+   wrapper#button-box {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1700px) {
+   wrapper#button-box {
+    width: 100%;
+  }
+  wrapper#button-box button {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  wrapper#quote-box {
+    width: 90%;
+  }
+}

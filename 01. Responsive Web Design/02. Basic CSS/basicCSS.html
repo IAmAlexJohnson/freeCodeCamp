@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>freeCodeCamp | Basic CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <style>
+      .blue-text{color:blue;}
+      .red-text{color: red;}
+      .size16{font-size: 16px;}
+      .font-style13{font-size: 16px; font-family: monospace;}
+      .h2-14{font-family: Lobster;}
+      .smaller-image{width:100px;}
+      .thick-green-border{border: 10px solid green;}
+      .img-border10{border-radius: 10px;}
+      .img-border50{border-radius: 50%;}
+
+      #cat-photo-form {background: green;}
+      .blue-text{color:blue;}
+      .red-text{color: red;}
+      .size16{font-size: 16px;}
+      .font-style13{font-size: 16px; font-family: monospace;}
+      .h2-14{font-family: Lobster;}
+      .smaller-image{width:100px;}
+      .thick-green-border{border: 10px solid green;}
+      .img-border10{border-radius: 10px;}
+      .img-border50{border-radius: 50%;}
+      .silver-background {background-color: silver;}
+      .injected-text { margin-bottom: -25px; text-align: center;}
+      .box {border-style: solid; border-color: black; border-width: 5px; text-align: center;}
+      .yellow-box { background-color: yellow; padding: 10px;}
+      .red-box {background-color: red;padding: 20px;}
+      .green-box {background-color: green;padding: 20px; margin: 20px;}
+      #body-div {background-color: black; color:green; font-family: monospace;}
+
+
+       :root {
+    --penguin-size: 300px;
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+
+  @media (max-width: 350px) {
+    :root {
+
+      /* add code below */
+      --penguin-size: 200px;
+      --penguin-skin: black;
+      /* add code above */
+
+    }
+  }
+
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  body {
+    background:#c6faf1;
+  }
+
+  .penguin * {
+    position: absolute;
+  }
+    </style>
+  </head>
+  <body>
+    <h1>freeCodeCamp | Basic CSS</h1>
+    <aside id="sidebar">
+      <a href="#section1">01. Change the Color of Text</a>
+      <a href="#section2">02. Use CSS Selectors to Style Elements</a>
+      <a href="#section3">03. Use a CSS Class to Style an Elements</a>
+      <a href="#section4">04.  Style Multiple Elements with a CSS Class</a>
+      <a href="#section5">05. Change the Font Size of an Element</a>
+      <a href="#section6">06. Set the Font Family of an Element</a>
+      <a href="#section7">07.  Import a Google Font</a>
+      <a href="#section8">08. Specify How Fonts Should Degrade</a>
+      <a href="#section9">09. Size your Images</a>
+      <a href="#section10">10. Add Borders Around Elements</a>
+      <a href="#section11">11. Add Rounded Corners with a Border Radius</a>
+      <a href="#section12">12. Make Circular Images with a Border Radius</a>
+      <a href="#section13">13. Give a Background Color to a Div Element</a>
+      <a href="#section14">14. Set the ID of an Element / Use an ID Attribute to Style an Element</a>
+      <a href="#section15">15. Inherit Styles from the Body Element</a>
+      <a href="#section15">16. All CSS with the Penguin.</a>
+
+
+    </aside>
+
+    <section>
+      <h1>Basic CSS</h1>
+        <div class="box" id="section1">
+          <div class="section-title">
+            <h4>01. Change the Color of Text</h4>
+          </div>
+            <div class="section-work">
+
+            <h2 style="color: red">CatPhotoApp</h2>
+
+            <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+            </div>
+        </div>
+
+        <div class="box" id="section2">
+          <div class="section-title">
+            <h4>02. Use CSS Selectors to Style Elements</h4>
+          </div>
+
+            <h2 class="blue-text">CatPhotoApp</h2>
+
+            <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+            </div>
+        </div>
+
+        <div class="box" id="section03">
+          <div class="section-title">
+            <h4>03. Use a CSS Class to Style an Elements</h4>
+          </div>
+          <h2 class="red-text">CatPhotoApp</h2>
+
+          <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        </div>
+
+
+        <div class="box" id="section04">
+          <div class="section-title">
+            <h4>04. Style Multiple Elements with a CSS Class</h4>
+            </div>
+            <h2 class="red-text">CatPhotoApp</h2>
+
+            <p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+          </div>
+
+          <div class="box" id="section05">
+            <div class="section-title">
+              <h4>05. Change the Font Size of an Element</h4>
+            </div>
+            <h2 class="red-text">CatPhotoApp</h2>
+
+            <p class="red-text size16">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+            <p class="size16">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+            </div>
+
+            <div class="box" id="section06">
+              <div class="section-title">
+                <h4>06. Set the Font Family of an Element</h4>
+              </div>
+              <h2 class="red-text">CatPhotoApp</h2>
+
+              <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+              <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+              </div>
+
+              <div class="box" id="section07">
+                <div class="section-title">
+                  <h4>07. Import a Google Font</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+              </div>
+
+              <div class="box" id="section08">
+                <div class="section-title">
+                  <h4>08. Specify How Fonts Should Degrade</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+              </div>
+
+
+
+              <div class="box" id="section09">
+                <div class="section-title">
+                  <h4>09. Size your Images</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <img class="smaller-image" src="https://bit.ly/fcc-relaxing-cat" alt="Orange cat">
+
+                <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+              </div>
+
+              <div class="box" id="section10">
+                <div class="section-title">
+                  <h4>10. Add Borders Around Elements</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="Orange cat">
+
+                <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+              </div>
+
+              <div class="box" id="section11">
+                <div class="section-title">
+                  <h4>11. Add Rounded Corners with a Border Radius</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <img class="smaller-image thick-green-border img-border10" src="https://bit.ly/fcc-relaxing-cat" alt="Orange cat">
+
+                <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+              </div>
+
+              <div class="box" id="section12">
+                <div class="section-title">
+                  <h4>12. Make Circular Images with a Border Radius</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <img class="smaller-image thick-green-border img-border50" src="https://bit.ly/fcc-relaxing-cat" alt="Orange cat">
+
+                <p class="red-text font-style13">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p class="font-style13">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+              </div>
+
+              <div class="box" id="section13">
+                <div class="section-title">
+                  <h4>13. Give a Background Color to a Div Element</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <p>Click here for <a href="#">cat photos</a>.</p>
+
+                <a href="#"><img class="smaller-image thick-green-border img-border50" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. ">
+                </a>
+                <div class="silver-background">
+                  <p>Things cats love:</p>
+                  <ul>
+                  <li>cat nip</li>
+                  <li>laser pointers</li>
+                  <li>lasagna</li>
+                  </ul>
+                  <p>Top 3 things cats hate:</p>
+                  <ol>
+                  <li>flea treatment</li>
+                  <li>thunder</li>
+                  <li>other cats</li>
+                  </ol>
+                </div>
+                <form action="/submit-cat-photo">
+                  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+                  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+                  <label><input type="checkbox" name="personality" checked> Loving</label>
+                  <label><input type="checkbox" name="personality"> Grumpy</label>
+                  <label><input type="checkbox" name="personality"> Playful</label>
+                  <input type="text" placeholder="cat photo URL" required>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+
+              <div class="box" id="section14">
+                <div class="section-title">
+                  <h4>14. Set the ID of an Element / Use an ID Attribute to Style an Element</h4>
+                </div>
+                <h2 class="red-text h2-14">CatPhotoApp</h2>
+
+                <p>Click here for <a href="#">cat photos</a>.</p>
+
+                <a href="#"><img class="smaller-image thick-green-border img-border50" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. ">
+                </a>
+                <div class="silver-background">
+                  <p>Things cats love:</p>
+                  <ul>
+                  <li>cat nip</li>
+                  <li>laser pointers</li>
+                  <li>lasagna</li>
+                  </ul>
+                  <p>Top 3 things cats hate:</p>
+                  <ol>
+                  <li>flea treatment</li>
+                  <li>thunder</li>
+                  <li>other cats</li>
+                  </ol>
+                </div>
+                <form action="/submit-cat-photo" id="cat-photo-form">
+                  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+                  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+                  <label><input type="checkbox" name="personality" checked> Loving</label>
+                  <label><input type="checkbox" name="personality"> Grumpy</label>
+                  <label><input type="checkbox" name="personality"> Playful</label>
+                  <input type="text" placeholder="cat photo URL" required>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+
+              <div class="box" id="section15">
+                <div class="section-title">
+                  <h4>15. Inherit Styles from the Body Element</h4>
+                </div>
+                  <div id="body-div">
+                    <h1>Hello world</h1>
+                  </div>
+
+              </div>
+
+              <div class="box" id="section16">
+                <div class="section-title">
+                  <h4>16. All CSS with the Penguin.</h4>
+                </div>
+                  <div class="penguin">
+                    <div class="penguin-bottom">
+                      <div class="right-hand"></div>
+                      <div class="left-hand"></div>
+                      <div class="right-feet"></div>
+                      <div class="left-feet"></div>
+                    </div>
+                    <div class="penguin-top">
+                      <div class="right-cheek"></div>
+                      <div class="left-cheek"></div>
+                      <div class="belly"></div>
+                      <div class="right-eye">
+                        <div class="sparkle"></div>
+                      </div>
+                      <div class="left-eye">
+                        <div class="sparkle"></div>
+                      </div>
+                      <div class="blush-right"></div>
+                      <div class="blush-left"></div>
+                      <div class="beak-top"></div>
+                      <div class="beak-bottom"></div>
+                    </div>
+                  </div>
+
+              </div>
+
+
+    </section>
+
+  </body>
+</html>

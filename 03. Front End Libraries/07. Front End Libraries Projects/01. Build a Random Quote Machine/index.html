@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Build a Random Quote Machine</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Oswald:400,700|Permanent+Marker" rel="stylesheet">    <!-- STYLESHEET -->
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1>Random Quote Machine</h1>
+
+    <wrapper id="button-box">
+      <button id="game-quotes">Game Quotes</button>
+      <button id="tv-quotes">TV Quotes</button>
+      <button id="motivational-quotes">Motivational Quotes</button>
+      <button id="funny-quotes">Funny Quotes</button>
+      <button id="random-quotes">Random</button>
+    </wrapper>
+
+    <wrapper id="quote-box">
+      <p id="text"></p>
+      <p id="author"></p>
+      <p id="citation"></p>
+
+      <div class="button-container">
+        <button type="button" name="new-quote" id="new-quote">New Quote</button>
+        <a target="_blank" href="https://twitter.com/intent/tweet" id="tweet-quote" class="twitter-share-button"><button type="button" name="tweet"><i class="fab fa-twitter"></i> Tweet</button></a>
+      </div>
+    </wrapper>
+
+    <footer>
+      <p>Use space and the numbers 1-5 to cycle through quotes</p>
+      <small>Coded by: <a href="https://twitter.com/AlxCrmr">Alex Johnson</a> </small>
+    </footer>
+
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="quoteMachine.js" charset="utf-8"></script>
+  </body>
+</html>

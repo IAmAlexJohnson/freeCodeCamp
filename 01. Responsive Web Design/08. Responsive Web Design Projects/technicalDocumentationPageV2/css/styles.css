@@ -1,0 +1,55 @@
+html, body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-size: 2em;
+}
+
+#navbar-logo{
+    font-size: 1.2em;
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) SM*/
+@media (min-width: 576px) { 
+    body{
+        background-color: yellow;
+    }
+      
+    
+    
+ }
+
+/* Medium devices (tablets, 768px and up) MD*/
+@media (min-width: 768px) { 
+    body{
+        background-color: pink;
+    }
+    #navbar{
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+    }
+   
+
+}
+
+/* Large devices (desktops, 992px and up) LG*/
+@media (min-width: 992px) { 
+    body {
+        background-color: lightblue;
+      }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) XL */
+@media  (min-width: 1200px) { 
+    body{
+        background-color: red;
+    }
+    
+ }

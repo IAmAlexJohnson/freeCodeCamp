@@ -2,14 +2,35 @@ html, body {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    background-color: #000;
+    color: #FFF;
 }
 
 header {
     font-size: 2em;
 }
-
+#navbar {
+   width:100%;
+}
 #navbar-logo{
     font-size: 1.2em;
+}
+.indented-bullet {
+    margin-left: 3em;
+    list-style-type: circle;
+}
+
+footer {
+    background-color: #FFF;
+    color: #000;
+    position: fixed;
+    bottom:0;
+    left:0;
+    height: 2em;
+}
+
+#back-to-top {
+    font-size: .8em;;
 }
 
 
@@ -18,7 +39,7 @@ header {
 /* Small devices (landscape phones, 576px and up) SM*/
 @media (min-width: 576px) { 
     body{
-        background-color: yellow;
+        /* background-color: yellow; */
     }
       
     
@@ -28,7 +49,7 @@ header {
 /* Medium devices (tablets, 768px and up) MD*/
 @media (min-width: 768px) { 
     body{
-        background-color: pink;
+        /* background-color: pink; */
     }
     #navbar{
         height: 100vh;
@@ -42,14 +63,14 @@ header {
 /* Large devices (desktops, 992px and up) LG*/
 @media (min-width: 992px) { 
     body {
-        background-color: lightblue;
+        /* background-color: lightblue; */
       }
  }
 
 /* Extra large devices (large desktops, 1200px and up) XL */
 @media  (min-width: 1200px) { 
     body{
-        background-color: red;
+        /* background-color: red; */
     }
     
  }

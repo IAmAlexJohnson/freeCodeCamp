@@ -1,0 +1,14 @@
+// CUSTOM COLOTS
+$theme-colors: (
+  "dark": #333,
+  "light": #fff,
+  "secondary":#7F0627
+);
+
+
+//IMPORT BOOTSTRAP
+@import "../bootstrap-4.4.1/scss/bootstrap";
+
+
+//IMPORT CUSTOM SYTLES
+@import "styles";

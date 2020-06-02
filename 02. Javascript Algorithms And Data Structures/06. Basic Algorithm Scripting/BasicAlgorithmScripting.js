@@ -10,138 +10,135 @@
 /* ================ */
   // Reverse a String
   function reverseString(str) {
-    let arr = [];
-    for(let i = 0; i < str.length; i++){
-      arr.push(str[i]);
-    }
-    return str = arr.reverse().join("");
-  }
 
+    let arr = [];
+    
+    for(let i = str.length-1; i >= 0; i--){
+      // console.log(`String: ${str.charAt(i)}`);
+      arr.push(str.charAt(i));
+    }
+    
+    // console.log(arr);
+    return arr.join("");
+  }
+  
   reverseString("hello");
+  
 
 /* ================ */
   // Factorialize a Number
   function factorialize(num) {
-      let factorial = 1;
-
-        if(num > 0){
-          for(let i = num; i > 0; i--){
-
-            factorial *= i;
-            console.log(factorial, "decrementing");
-          }
-        } else if(num == 0) {
-            num = 1;
-        }
-      return factorial;
+    let arr = [];
+  
+    if(num == 0){
+      return 1;
+    } else {
+      for(let i = 1; i <= num; i++){
+        arr.push(i);
+      }
+      // console.log(arr);
+      // console.log(arr.reduce((a,b) => a*b));
+      return arr.reduce((a,b) => a*b);
     }
-
-    factorialize(5);
+    
+  }
+  
+  factorialize(5);
+  
 
 /* ================ */
   // Find the Longest Word in a String
-    function findLongestWordLength(str) {
-      let strArr = [];
-      let numArr = [];
-      strArr = str.split(" ");
+  function findLongestWordLength(str) {
 
-      console.log(strArr, "Strings");
-
-      for(let i = 0; i < strArr.length; i++){
-        numArr.push(strArr[i].length);
+    let arr = str.split(" ");
+    let num = 0;
+  
+    console.log(arr);
+    
+    for(let i =0; i <arr.length; i++){
+      if(arr[i].length > num){
+        num = arr[i].length;
       }
-      console.log(numArr, "Numbers");
-      numArr = numArr.sort((a,b) => a < b);
-      console.log(numArr, "Sorted Numbers");
-      return numArr[0];
     }
-
-    findLongestWordLength("The quick brown fox jumped over the lazy dog");
-
+  
+    return num;
+  }
+  
+  findLongestWordLength("The quick brown fox jumped over the lazy dog");
+  
 /* ================ */
   // Return Largest Numbers in Arrays
-    function largestOfFour(arr) {
-      // You can do this!
-      let largestNumArr = [];
-      for(let i = 0; i< arr.length; i++){
-        console.log(arr[i].sort((a,b)=> a<b));
-        arr[i].sort((a,b)=> a<b);
-        largestNumArr.push(arr[i][0]);
-      }
-      return largestNumArr;
-    }
+  function largestOfFour(arr) {
 
-    largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-
+    return arr.map(
+      (a) => 
+      a.sort((a,b) => a-b))
+      .map((a) => a[a.length-1]
+      );
+    
+  }
+  
+  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+  
 /* ================ */
   // Confirm the Ending
-    function confirmEnding(str, target) {
-      // "Never give up and good luck will find you."
-      // -- Falcor
+  function confirmEnding(str, target) {
 
-      let strEnd = str.substring(str.length-target.length);
-      console.log(strEnd);
-      if(strEnd === target){
-        return true;
-       } else {
-         return false;
-       }
+    console.log(str.slice(-target.length));
+    console.log(str.slice(-target.length) == target);
+    
+      return str.slice(-target.length) == target;
     }
-
+    
     confirmEnding("Bastian", "n");
+    
 
 /* ================ */
   // Repeat a String Repeat a String
   function repeatStringNumTimes(str, num) {
-    // repeat after me
     let newStr = "";
     if(num > 0){
-      for(let i = 0; i < num; i++) {
-        newStr += str;
+      for(let i = 0; i < num; i ++){
+        newStr+=str;
       }
-      console.log(newStr);
       return newStr;
     } else {
       return "";
     }
   }
-
+  
   repeatStringNumTimes("abc", 3);
+  
 
 /* ================ */
   // Truncate a String
     function truncateString(str, num) {
-      // Clear out that junk in your trunk
-      let truncateStr= "";
-      if(num < str.length ){
-         truncateStr = str.slice(0, num) + "...";
-          console.log(str.slice(0, num), "slice");
-          console.log(truncateStr);
-          return truncateStr;
-      }else{
+      function truncateString(str, num) {
+        if(str.length > num){
+          // console.log(str.slice(0,num)+"...");
+          return str.slice(0,num)+"...";
+        }
         return str;
       }
-    }
-
-    truncateString("A-tisket a-tasket A green and yellow basket", 8);
-
+      
+      truncateString("A-tisket a-tasket A green and yellow basket", 8);
+      
 /* ================ */
   // Finders Keepers
   function findElement(arr, func) {
     let num = 0;
-    for (let i = 0; i < arr.length; i++) {
-      console.log(func(arr[i]));
-      if(func(arr[i])){
-        num = arr[i];
-        break;
-      } else {
-        num = undefined;
+    for(let i = 0; i < arr.length; i++){
+      num = arr[i];
+      // console.log(`NUM: ${num} fUNC: ${func(num)}`);
+      if(func(num) == true){
+        return num;
       }
     }
-    return num;
+    return undefined;
   }
-
+  
   findElement([1, 2, 3, 4], num => num % 2 === 0);
+  
 
 /* ================ */
   // Boo who
@@ -158,40 +155,45 @@
 
 /* ================ */
   // Title Case a Sentence
-    function titleCase(str) {
-      return str.toLowerCase().replace(/(^|\s)\S/g, l => l.toUpperCase())
-    }
-
-    titleCase("I'm a little tea pot");
+  function titleCase(str) {
+    let arr = str.toLowerCase().split(" ");
+    return arr.map(a => a.charAt(0).toUpperCase()+a.slice(1)).join(" ");
+  
+  }
+  
+  titleCase("I'm a little tea pot");
+  
 
 /* ================ */
   // Slice and Splice
   function frankenSplice(arr1, arr2, n) {
-      // It's alive. It's alive!
-      let newArr = arr2.slice();
-      console.log(newArr, "sliced");
-
-      newArr.splice(n, 0, ...arr1);
-      return newArr;
-    }
-
-    frankenSplice([1, 2, 3], [4, 5, 6], 1);
+    let newArr = [];
+    newArr.push(...arr2.slice(0,n));
+    newArr.push(...arr1);
+    newArr.push(...arr2.slice(n, arr2.length));
+    console.log(newArr);
+    return newArr;
+  }
+  
+  frankenSplice([1, 2, 3], [4, 5], 1);
+  
 
 /* ================ */
   // Falsy Bouncer
   function bouncer(arr) {
     // Don't show a false ID to this bouncer.
-    let newArr = [];
-    for(let i = 0; i < arr.length; i++){
-      console.log(Boolean(arr[i]));
-      if(Boolean(arr[i]) === true){
-        newArr.push(arr[i]);
+    function bouncer(arr) {
+      let newArr = [];
+      for(let i = 0; i < arr.length; i++){
+        if(Boolean(arr[i])){
+          newArr.push(arr[i]);
+        }
       }
+      return newArr;
     }
-    return newArr;
-  }
-
-  bouncer([7, "ate", "", false, 9]);
+    
+    bouncer([7, "ate", "", false, 9]);
+    
 
 /* ================ */
   // Where do I Belong

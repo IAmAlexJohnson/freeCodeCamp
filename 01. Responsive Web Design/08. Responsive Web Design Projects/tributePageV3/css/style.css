@@ -135,6 +135,10 @@ ul {
     line-height: 3.125em;
 }
 
+#footer span {
+    margin-right: 1em;
+  }
+
 .row {
     max-width: 90em;
     margin: 0 auto;

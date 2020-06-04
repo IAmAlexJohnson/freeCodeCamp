@@ -1,0 +1,384 @@
+:root {
+    --color-main: #5357FF;
+    --color-main-dark: rgb(38, 40, 141);
+    --color-red: rgb(230, 33, 33);
+    --color-green: rgb(72, 179, 58);
+    --color-white: #FFF;
+    --color-grey: #333;
+    --color-grey-2: rgb(39, 39, 39);
+
+    --color-faded:rgba(51, 51, 51, 0.6);
+
+    --box-shadow-color: rgba(0,0,0, .1);
+
+    --border-color: rgba(51, 51, 51, 0.164);
+}
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    background-color: #F7F8FC;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-grey);
+    overflow-y: hidden;
+}
+
+a, a:link, a:visited {
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+ a:hover {
+    color: var(--color-main-dark);
+}
+
+
+/* ==================== FORM ======================== */
+.form__container {
+   width: 90%;
+   height: 90%;
+   opacity: 0;
+
+   
+   animation: moveInBottom 1s ease-in-out .2s;
+   animation-fill-mode: forwards;
+}
+
+form {
+    display: block;
+    /* width: 50%; */
+    padding: 3em 4em;
+    box-shadow: 0 10px 20px var(--box-shadow-color);
+    background-color: var(--color-white);  
+}
+
+
+/* ==================== FORM INPUTS ======================== */
+.form__input {
+        font-size: 1em;
+        font-family: inherit;
+        color: inherit;
+        padding: 10px 15px;
+        border-radius: 2px;
+        border: none;
+        border: 2px solid var(--border-color);
+        border-bottom: 3px solid var(--border-color);
+        width: 100%;
+        display: inline-block;
+        transition: all .3s;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 10px 20px var(--box-shadow-color);;
+    border-bottom: 3px solid var(--color-main);
+}
+
+.form__input:focus:invalid {
+    border-bottom: 3px solid var(--color-red);
+}
+
+/* ==================== FORM LABELS ======================== */
+.form__label {
+    margin-top: 10px;
+    margin-bottom: 10px;;
+    display: block;
+    transition: all .3s;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8em;
+}
+
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+
+
+
+
+/* ==================== RADIO BTNS ======================== */
+.form__radio-group {
+    display: inline-block;
+    margin-right: 40px;
+    
+}
+
+.form__radio-label {
+    cursor: pointer;
+
+}
+
+
+/* ==================== CHECKBOX======================== */
+
+.form__checkbox--description {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8em;
+}
+ 
+
+
+input[type="checkbox"], input[type="radio"]{
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding:1em;
+  }
+
+  /* ==================== BUTTONS ======================== */
+
+.btn, .btn:link, .btn:visited {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: block;
+    text-transform: uppercase;
+    padding: 0 1em;
+    background-color: var(--color-main);
+    border: none;
+    color: var(--color-white);
+    border-radius: 3px;
+    box-shadow: 0 10px 20px var(--box-shadow-color);
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: var(--color-main-dark);
+    cursor: pointer;
+}
+
+.btn:active {
+    top: 3px;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 10px 20px var(--box-shadow-color);
+    border-bottom: 3px solid var(--color-main);
+}
+
+/* ==================== DESCRIPTION ======================== */
+.survey__description {
+    width: 100%;
+    display: block;
+    padding: 4em;
+    
+    line-height: 2em;
+    animation: moveInRight 1s ease-in ;
+}
+.survey__description a{
+    color: var(--color-grey);
+}
+.survey__description a:hover{
+    opacity: .9;
+}
+.twitter-group, .github-group , .codepen-group {
+    margin-top: 3em;
+    border-bottom: 2px solid var(--border-color);
+    display: inline-block;
+    width: 90%;
+    position: relative;
+    transition: all .2s;
+}
+.twitter-group:hover, .github-group:hover , .codepen-group:hover{
+    border-bottom: 2px solid var(--color-main);
+}
+
+
+.twitter-group:hover .right-arrow, .github-group:hover .right-arrow , .codepen-group:hover .right-arrow{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: right-arrow-bounce .3s linear  infinite;
+    color:var(--color-main);
+}
+
+.bold {
+    font-weight: 700;
+}
+.faded {
+    color:var(--color-faded);
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.color {
+    color:var(--color-main-dark);
+}
+
+.right-arrow {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+#title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* ==================== UTILITIES ======================== */
+
+.u-margin-top-sm {
+    margin-top: 30px;
+}
+
+.u-margin-left-sm{
+    margin-left: 2em;
+}
+
+
+/* ==================== GRID ======================== */
+.row {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.col-1-of-2 {
+    width: calc((100% - 60px) / 2);
+    float: left;  
+}
+
+.clear-fix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ==================== MODAL ======================== */
+.modal {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+        backdrop-filter: blur(10px);
+        background-color: var(--box-shadow-color);
+    }
+
+}
+.modal h2{
+    text-transform: uppercase;
+}
+.modal__submitted{
+    margin-bottom: 10px;
+}
+.modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 75%;
+    background-color: var(--color-white);
+    box-shadow: 0 2rem 4rem var(--box-shadow-color);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.25);
+    transition: all .5s .2s;
+    text-align: center;
+    padding: 10em 0;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal:target .modal__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal__close,
+    .modal__close:link,
+    .modal__close:visited {
+        color: var(--color-grey);
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 30px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+        line-height: 1;
+    }
+
+    .modal__close:hover {
+        color: var(--color-main);
+        
+    }
+
+
+/* ==================== ANIMATION ======================== */
+
+@keyframes moveInRight { 
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+    80%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes right-arrow-bounce {
+    0%{
+        right: 0;
+    }
+    80%{
+        right: -3px;
+    }
+    100%{
+        right: 0;
+    }
+}
+

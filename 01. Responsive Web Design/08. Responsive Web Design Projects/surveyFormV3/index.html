@@ -10,63 +10,209 @@
 
         <link rel="stylesheet" href="css/styles.css">
         
-        <title>Natours | Exciting tours for adventurous people</title>
+        <title>freeCodeCamp | Survey Form</title>
     </head>
 
     <body>
-        <main>
+        <main id="main">
 
 
             <div class="row">
-                <div class="book">
-                    <div class="book__form">
-                        <form action="#" class="form">
-                            <div class="u-margin-bottom-medium">
-                                <h2 class="heading-secondary">
-                                    Start booking now
-                                </h2>
-                            </div>
 
-                            <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                                <label for="name" class="form__label">Full name</label>
-                            </div>
-
-                            <div class="form__group">
-                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
-                                <label for="email" class="form__label">Email address</label>
-                            </div>
-
-                            <div class="form__group u-margin-bottom-medium">
-                                <div class="form__radio-group">
-                                    <input type="radio" class="form__radio-input" id="small" name="size">
-                                    <label for="small" class="form__radio-label">
-                                        <span class="form__radio-button"></span>
-                                        Small tour group
-                                    </label>
+                    <div class="col-1-of-2">
+                        <div class="form__container">    
+                            <form action="#modal" id="survey-form">
+    
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                                    <label for="name" class="form__label" id="name-label">Full name</label>
                                 </div>
-
-                                <div class="form__radio-group">
-                                    <input type="radio" class="form__radio-input" id="large" name="size">
-                                    <label for="large" class="form__radio-label">
-                                        <span class="form__radio-button"></span>
-                                        Large tour group
-                                    </label>
+    
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                    <label for="email" class="form__label" id="email-label">Email address</label>
                                 </div>
-                            </div>
+    
+                                <div class="form__group">
+                                    <input type="tel" class="form__input" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Phone Number" required>
+                                    <label for="number" class="form__label" id="phone-label">Phone Number</label>
+                                </div>
+    
+                                <div class="form__group">
+                                    <input type="number" class="form__input" placeholder="Age" id="number" required min="0" max="99">
+                                    <label for="number" class="form__label" id="number-label">Age</label>
+                                </div>
+    
+    
+                                <div class="form__group ">
+                                    <label for="dropdown" class="form__label">How awesome are you really?</label>
+                                    <select id="dropdown" name="affiliates" class="form__input">
+                                        <option value="" disabled selected>Select your option</option>
+                                        <option value="crazy-awesome">Crazy Awesome</option>
+                                        <option value="too-awesome">Too Awesome</option>
+                                        <option value="cant-explain">Can't even explain how awesome I am</option>
+                                        <option value="no-bragging">I don't want to brag</option>
+                                      </select>
+                                </div>
+    
+                               
+                                <div class="form__group u-margin-top-sm">
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" value="female" name="gender"id="female" required>
+                                        <label for="female" class="form__radio-label">
+                                            Female
+                                        </label>
+                                    </div>
+                                
+    
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" value="male" name="gender" id="male" required>
+                                        <label for="male" class="form__radio-label">
+                                            Male
+                                        </label>
+                                    </div>
+    
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" value="other" name="gender" id="other" required>
+                                        <label for="other" class="form__radio-label">
+                                            Other
+                                        </label>
+                                    </div>
 
-                            <div class="form__group">
-                                <button class="btn btn--green">Next step &rarr;</button>
-                            </div>
-                        </form>
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" value="other" name="gender" id="not-say" required checked>
+                                        <label for="not-say" class="form__radio-label">
+                                            Rather not say
+                                        </label>
+                                    </div>
+                                </div>
+    
+
+                                
+                                <div class="form__group u-margin-top-sm">
+
+                                    <p class="form__checkbox--description">
+                                        Check some of the awesome things about you:
+                                    </p>
+                                    
+                                        <div class="form__checkbox-group">
+
+                                        <div class="row clear-fix">
+
+                                            <div class="col-1-of-2">
+                                                <input type="checkbox" id="trait1" name="trait1" value="Code">
+                                                <label for="trait1"> I like to code</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait2" name="trait2" value="Games">
+                                                <label for="trait2"> I Like video games</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait3" name="trait3" value="Draw">
+                                                <label for="trait3"> I like to draw</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait4" name="trait4" value="Sports">
+                                                <label for="trait4"> I like sports</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait9" name="trait9" value="anime">
+                                                <label for="trait9"> I like to watch anime</label>
+                                            </div>
+
+                                            <div class="col-1-of-2">
+                                                <input type="checkbox" id="trait10" name="trait10" value="turtles">
+                                                <label for="trait10"> I like turtles</label>
+                                                <br>
+                                                <input type="checkbox" id="trait5" name="trait5" value="introvert">
+                                                <label for="trait5"> I'm an introvert</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait6" name="trait6" value="extrovert">
+                                                <label for="trait6"> I'm an extrovert</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait7" name="trait7" value="dog">
+                                                <label for="trait7"> I'm a dog person</label>
+                                                    <br>
+                                                <input type="checkbox" id="trait8" name="trait8" value="cat">
+                                                <label for="trait8"> I'm a cat person</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="form__group u-margin-top-sm">
+                                    <label for="comments" class="form__label">Any comments or suggestions?</label>
+                                    <textarea name="comments" id="comments"></textarea>
+                                </div>
+    
+                                <div class="form__group u-margin-top-sm">
+                                    <button class="btn" id="submit">Submit &rarr;</button>
+                                </div>
+                            </form>
+    
                     </div>
                 </div>
+                    <div class="col-1-of-2">
+                        <div class="survey__description">
+                            
+                                <h1 id="title">
+                                    Awesomeness Survey Form
+                                </h1>
+                                <p id="description" class="u-margin-top-sm">
+                                    Thank you for taking the time to tell us how awesome you are! Hope you have a wonderful day.
+                                </p>
+                                <p class="u-margin-top-sm">This project was made for <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp's</a> Responsive Web Design Project - Build A Survey Form. If when you run tests all 17 do not pass, fill out the form and run again.</p>
+                                
+                                <div class="twitter-group">
+                                    <a href="https://twitter.com/IAmAlex_Johnson" target="_blank">
+                                        <p class="bold">You can check out my Twitter </p>
+                                        <div class="faded u-margin-left-sm">@IAmAlex_Johnson</div>
+                                        <span class="right-arrow">&rarr;</span>
+                                    </a>
+                                </div>
+
+                                <div class="github-group">
+                                    <a href="https://github.com/IAmAlexJohnson" target="_blank">
+                                        <p class="bold">You can check out my GitHub </p>
+                                        <div class="faded u-margin-left-sm">@IAmAlexJohnson</div>
+                                        <span class="right-arrow">&rarr;</span>
+                                    </a>
+                                </div>
+
+                                <div class="codepen-group">
+                                    <a href="https://codepen.io/IAmAlexJohnson" target="_blank">
+                                        <p class="bold">You can check out my Codepen </p>
+                                        <div class="faded u-margin-left-sm">@IAmAlexJohnson</div>
+                                        <span class="right-arrow">&rarr;</span>
+                                    </a>
+                                </div>
+
+                                <p class="u-margin-top-sm bold uppercase color">Thank you for visiting.</p>
+
+                            
+                        </div>
+                    </div>
+
             </div>
-
-
 
         </main>
 
 
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <a href="#main" class="modal__close">&times;</a>
+                <p class="modal__submitted">Your form has been submitted.</p>
+                <h2 class="modal__thank-you">Thank you for being awesome!</h2>
+                <img src="imgs/rickAndMorty.gif" class="u-margin-top-sm" alt="Rick, Morty, and Summer from the show Rick and Morty">
+            
+                <footer id="footer">
+                    <p class="footer__attribution u-margin-top-sm">
+                      <span>Coded by: 
+                        <a target="_blank" href="https://github.com/IAmAlexJohnson">Alex Johnson</a></span>
+                      <span>Follow me on
+                      <a href="https://twitter.com/IAmAlex_Johnson">Twitter</a></span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
 </html>

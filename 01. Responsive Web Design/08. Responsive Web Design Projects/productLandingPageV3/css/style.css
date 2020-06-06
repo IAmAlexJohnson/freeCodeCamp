@@ -12,6 +12,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    min-width: 370px;
+}
 
 body {
     font-size: 16px;
@@ -23,7 +26,7 @@ body {
 }
 section {
     background-color: #F7F7F7;
-    margin-top: -100px;
+    margin-top: -6.25em;
 }
 
 .tertiary-heading{
@@ -43,7 +46,7 @@ section {
 }
 
 .section {
-    padding-top: 200px;
+    padding-top: 12.5em;
 }
 /* ============== UTILITIES ============ */
 .visuallyhidden {
@@ -66,17 +69,17 @@ section {
   }
 
 .u-margin-top-sm{
-    margin-top: 20px !important;
+    margin-top: 1.25em !important;
 }
 .u-margin-left-xs{
-    margin-left: 10px !important;
+    margin-left: .625em !important;
 }
 
 .u-margin-top-sm-bottom-xs {
-    margin: 20px 0 10px;
+    margin: 1.25em 0 .625em;
 }
 .u-section-padding-xl {
-    padding-bottom: 100px;
+    padding-bottom: 6.25em;
     
 }
 
@@ -132,7 +135,7 @@ section {
 
 /* ============== NAV ============ */
 #nav-bar {
-    height: 50px;
+    height: 3.425em;
     width: 100%;
     display:flex;
     padding: 1em 2em;
@@ -150,11 +153,11 @@ nav ul {
     margin-top: 2.5em;
     text-transform: uppercase;
     position: relative;
-    right: 50px;
+    right: 3.125em;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 1.875em;
     float: right;
     font-weight: 300;
 
@@ -173,30 +176,30 @@ nav ul li {
 }
 #header-img {
     /* width: 100px; */
-    height: 120px;
+    height:7.5em;
     position: absolute;
     top: 0;
-    left: 3.5em;
+    left: 6em;
 }
 
 .nav-colored { 
     background-color:#000; 
     top: 0;
     font-size: .9em;
-    height: 80px !important;
+    height: 5em !important;
     
 }
 
 .nav-colored #header-img{
-    height: 100px;
-    top: -15px;
+    height: 6.25em;
+    top: -.9375em;
 
 }
 
 .nav-colored ul {
     display:flex;
 
-    flex-direction:  row-reverse ;
+    flex-direction: row-reverse ;
     height: 100%;
     margin-top: 1.2em;
 }
@@ -216,13 +219,14 @@ nav ul li {
     background-image: linear-gradient(
         to right bottom,
         rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.1)),
+        rgba(255, 255, 255, 0.3)),
         url(../imgs/coffee-cup-beans.jpg);
     background-size:100%;
     background-position: top;
     position: relative;
 
     color: #FFF;
+    text-shadow: 0 1px 10px #000;
     
 }
 
@@ -231,7 +235,7 @@ nav ul li {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,10 +243,10 @@ nav ul li {
 }
 
 .text-container {
-    max-width: 900px;
-    height: 500px;
+    max-width: 56.25em;
+    height: 31.25em;
 
-    margin-top: 150px;
+    margin-top: 18.75em;
 }
 
 .secondary-heading {
@@ -260,15 +264,18 @@ nav ul li {
 
 .section-description{
     text-align: center;
-    max-width: 900px;
-    margin:0 auto 30px;
+    max-width: 56.25em;
+    margin:0 auto 1.875em;
 }
+#coffee-types-section .col-1-of-2 {
+    padding: 0 2em;
 
+}
 /* ============== PRICING ============ */
 
 .card {
     position: relative;
-    height: 620px;
+    height: 38.75em;
 
     background-color: #F7F7F7;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
@@ -278,7 +285,7 @@ nav ul li {
     padding-bottom: 1.5em;
 }
 .card-heading {
-    font-size: 28px;
+    font-size: 1.75em;
     font-weight: 300;
     text-transform: uppercase;
     /* color: #000; */
@@ -287,7 +294,7 @@ nav ul li {
 }
 
 .card-details {
-    padding: 20px;
+    padding: 1.25em;
 }
 
 .card ul {
@@ -298,8 +305,8 @@ nav ul li {
 
 .card ul li {
     text-align: center;
-    font-size: 15px;
-    padding: 10px;
+    font-size: .9375em;
+    padding: .625em;
 }
 
 .card ul li:not(:last-child) {
@@ -313,12 +320,12 @@ nav ul li {
 }
 
 .card-price-month {
-    font-size: 14px;
+    font-size: 0.875em;
     text-transform: uppercase;
 }
 
 .card-price-value {
-    font-size: 60px;
+    font-size: 3.75em;
     font-weight: 300;
 }
 
@@ -335,9 +342,9 @@ nav ul li {
 
 .popular {
     width: 100%;
-    height: 50px;
+    height: 3.125em;
 
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 
@@ -358,11 +365,17 @@ nav ul li {
     border-top: 1px solid rgba(0, 0, 0, 0.151);
 }
 
+#video {
+    width:560px;
+    height:315px;
+
+}
+
 
 /* ============== CONTACT SECTION ============ */
 
 #contact-section {
-        padding: 100px 0;
+        padding: 6.25em 0;
         background-image: linear-gradient(
             to right bottom, 
             var(--color-main-light),
@@ -382,14 +395,14 @@ nav ul li {
     position: relative;                              
     
     border-radius: 3px;
-    box-shadow: 0 15px 40px rgba(0,0,0, .2);
+    box-shadow: 0 .9375em 2.5em rgba(0,0,0, .2);
 
     WIDTH: 100%;
 }
 
 .contact-form {
     width: 50%;
-    padding: 60px;
+    padding: 3.75em;
 }
 .form-group {
     margin-top: 20px;
@@ -398,7 +411,7 @@ nav ul li {
     font-size: 1.2em;
     font-family: inherit;
     color: inherit;
-    padding: 10px 15px;
+    padding: .625em .9375em;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, .5);
     border: none;
@@ -416,7 +429,7 @@ footer {
     background-color: #333333;
     width: 100%;
     color: #FFF;
-    padding: 5em;
+    padding: 5em 5em;
     color: var(--color-footer-text);
 }
 .footer-heading {
@@ -453,7 +466,7 @@ footer ul li a.footer-link {
 
 #footer-img {
     /* width: 100px; */
-    height: 150px;
+    height: 9.375em;
     
 }
 .attribution-link-container a{
@@ -462,17 +475,17 @@ footer ul li a.footer-link {
 
 /* ============== GRID ============ */
 .row {
-    max-width: 1440px;
+    max-width: 90em;
     margin: 0 auto;
     display: flex;
 }
 
 .col-1-of-2 {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 3.75em) / 2);
 }
 
 .col-1-of-3 {
-    width: calc((100% - 2 * 60px) / 3);
+    width: calc((100% - 2 * 3.75em) / 3);
 }
 
 .clear-fix::after {
@@ -486,12 +499,349 @@ footer ul li a.footer-link {
 }
 
 [class^="col-"]:not(:last-child) {
-        margin-right: 60px;
+        margin-right: 3.75em;
     }
 
 /* ============== MEDIA QUERIES============ */
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 100em) {    /* 1600 */
+    .card-heading {
+        font-size: 1.5em;
+    }
+    .card-details {
+        padding: 1em;
+    }
+
+    .contact-form-container {
+        WIDTH: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 96.875em) {  /* 1550px */
+    #header {
+        height: 95vh;
+    }
+    .text-container {
+        margin-top: 16em;
+    }
+
+    #pricing-section, #video-section {
+        padding-left: 2em;
+        padding-right: 2em;
+    
+    }
+}
+
+@media only screen and (max-width: 90em) {  /* 1440px */
+    body {
+        padding: 0;
+        
+    }
+    #header {
+        background-position: center;
+    }
+
+}
+
+@media only screen and (max-width: 84.375em) {  /* 1350px */
+    #header {
+        height: 85vh;
+    }
+}
+
+@media only screen and (max-width: 75em) {    /* 1200 */
+    #header {
+        height: 80vh;
+    }
+    .text-container {
+        margin-top: 15em;
+    }
+    
+    .quaternary-heading{
+        font-size: 1.1em;
+    }
+    .contact-form-container {
+        WIDTH: 90%;
+    }
+    
+    #video-section {
+        padding-left: 5em;
+        padding-right: 5em;
+        width: 100%;
+    }
+   
+    #video-section #video {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1.875em;
+       
+    }
+    #video-section  .col-1-of-2{
+        width: 100%;
+        float: none;
+    }
+    #video-section .row {
+        flex-direction: column;
+    }
+
+    .card { 
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 1.875em;
+    }
+
+    .card-details {
+        padding: .5em;
+    }
+    .col-1-of-3 {
+        width: 100%;
+    }
+
+    #pricing-section .row {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 68.75em) {    /* 1000 */
+    #header {
+        height: 70vh;
+    }
+    .text-container {
+        margin-top: 12em;
+    }
+
+    #coffee-types-section .row {
+        flex-direction: column;
+    }
+    [class^="col-"] {
+        float: clear;
+    }
+    .col-1-of-2 {
+        width: 100%;
+    }
+    
+    [class^="col-"]:not(:last-child) {
+        margin-right: 0;
+    }
+
+    #coffee-types-section {
+        padding-left: 5em;
+        padding-right: 5em;;
+    }
+
+    #coffee-types-section .quaternary-heading{
+        font-size: 1.2em;
+    }
+
+    
+}
+
+@media only screen and (max-width: 60em) {    /* 960 */
+    .btn {
+        padding: .6em 2em;
+    }
+
     #header {
         height: 60vh;
+        background-position: top;
+    }
+    .text-container {
+        margin-top: 10em;
+    }
+
+    .secondary-heading {
+        font-size: 2em;
+    }
+    .header-lead {
+        font-size: 1em;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .footer-paragraph, .footer-link {
+        font-size: 1em;
+    }
+
+    footer .row {
+        flex-direction: column;
+    }
+
+    footer .col-1-of-3 {
+        margin-bottom: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 52.0625em) {    /* 833 */
+    #header {
+        height: 50vh;
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.3)),
+        url(../imgs/coffee-cup-beans2.jpg);
+        background-position: 50% 30%;
+    }
+    .text-container {
+        margin-top: 10em;
+    }
+
+    .contact-form-container {
+        background-image: linear-gradient(
+             105deg,
+             rgba(255, 255, 255, 0.8) 0%,
+             rgba(255, 255, 255, 0.8) 50%),
+              url(../imgs/coffee-beans.jpg);
+              WIDTH: 95%;
+    }
+    #form h2 {
+        text-align: center;
+    }
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-input, .btn-form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 48.125em) {    /* 770 */
+    #header {
+        height: 50vh;
+    }
+    .text-container {
+        margin-top: 9em;
+    }
+}
+
+@media only screen and (max-width: 40.9375em) {    /* 655 */
+    #header {
+        background-repeat: no-repeat;
+        text-shadow: 1px 2px 2px #000;
+
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.3)),
+        url(../imgs/coffee-cup-beans3.png);
+    }
+    .u-margin-top-sm{
+        margin-top: .625em !important;
+    }
+
+    .text-container {
+        padding: 0 2em;
+        margin-top: -1em;
+        height: auto;
+    }
+   .section {
+       padding-top: 0em;
+   }
+   body {
+    background-color: #F7F7F7;
+   }
+   section {
+    margin-top: 0;
+}
+
+    #video {
+        width: 500px;
+        height: 255px;
+    }
+}
+
+@media only screen and (max-width: 38.75em) {    /* 620 */
+    #header {
+        background-position: 50% 10%;
+    }
+    .section {
+        padding-top: 5em;
+    }
+    
+    #coffee-types-section, #video-section {
+        padding-left: 1.5em;
+        padding-right: 1.5em;;
+    }
+    
+    #header-img {
+        left: 1em;
+    }
+
+    nav ul {
+        position: relative;
+        right: 1em;
+
+    }
+
+    #video {
+        width: 100%;
+    }
+
+    .card { 
+        width: 90%;
+    }
+
+    .row, .col-1-of-2 {
+        width: 100%;
+    }
+    
+}
+@media only screen and (max-width: 31.25em) {    /* 500 */
+    #header {
+        height: 40vh;
+    }
+ 
+    #header-img {
+        height:5em;
+        left: .5em;
+    }
+    nav ul {
+        right: 0;
+        margin-top: 1em;
+    }
+    nav ul li {
+        margin-right: 0;
+        margin-left: 1.1em;
+    }
+    h2.header-title.secondary-heading {
+        font-size: 1.5em;
+    }
+    .text-container {
+        margin-top: 1em;
+    }
+
+    .btn {
+        padding: .6em 1em;
+    }
+}
+
+@media only screen and (max-width: 28.125em) {    /* 450 */
+    #coffee-types-section {
+        padding-top: 1em;
+    }
+    #pricing-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-form {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    footer {
+        padding: 5em 1.5em;
+    }
+}
+
+@media only screen and (max-width: 25em) {    /* 400 */
+    .text-container {
+        padding: 1em;
+    }
+    .header-lead {
+        padding: 0 1em;
     }
 }

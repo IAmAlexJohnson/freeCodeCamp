@@ -7,22 +7,20 @@
 
 
         <!--<link rel="stylesheet" href="css/icon-font.css">-->
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">        
         <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/scripts.js"></script>
         
         
         <title>freeCodeCamp | Product Landing Page | Coffee</title>
     </head>
 
     <body>
-
-        
-
-
-        <header id="header">
+        <header id="header" >
 
             <nav id="nav-bar">
-                <img src="imgs/horton-coffee.png" alt="Horton Coffee Logo" id="header-img">
+                <a href="#header"><img src="imgs/horton-coffee.png" alt="Horton Coffee Logo" id="header-img"></a>
                 <h1 class="visuallyhidden">Horton Coffee</h1>
                 <ul>
                     <li><a class="nav-link" href="#contact-section">Contact Us</a></li>
@@ -37,12 +35,12 @@
             <div id="header-container">
                 
                 <div class="text-container">
-                    <h2 class="header-title">Warm addictive brown stuff</h2>
+                    <h2 class="header-title secondary-heading">Warm addictive brown stuff</h2>
                     <p class="header-lead u-margin-top-sm">There is nothing quite like a steaming cup full of an addicting drug in the morning.</p>
 
                     <div class="btn-container u-margin-top-sm">
-                        <input class="btn btn-cta" type="button" id="purchase" value="Purchase Now">
-                        <input class="btn btn-other u-margin-left-xs" type="button" id="learn-more" value="Learn More &rarr;">
+                        <a href="#pricing-section" class="btn btn-cta" type="button" id="purchase">Purchase Now</a>
+                        <a href="#coffee-types-section" class="btn btn-other u-margin-left-xs" type="button" id="learn-more">Learn More &rarr;</a>
                     </div>
                     
                 </div>
@@ -52,41 +50,276 @@
         <main>
 
             
-            <section id="coffee-types-section">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ea blanditiis nam cupiditate quam. Perspiciatis omnis adipisci provident quidem doloremque quisquam voluptatem, iste earum obcaecati autem voluptatum aliquid error voluptatibus!</p>
-            </section>
+            <section id="coffee-types-section" class="section">
+                <div class="section-description">
+                    <h3 class="tertiary-heading">What does your coffee say about you?</h3>
+                    <p class="paragraph u-margin-top-sm">Extra mug plunger panna seasonal aged eu half cortado variety fair Blue and, 
+                        ristretto con irish sweet body Aromatic roast kopi-luwak acerbic so. White mug variety mountain
+                         id aged dripper cream kopi-luwak froth. 
+                    </p>
+                </div>
 
-            <section id="pricing-section">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ea blanditiis nam cupiditate quam. Perspiciatis omnis adipisci provident quidem doloremque quisquam voluptatem, iste earum obcaecati autem voluptatum aliquid error voluptatibus!</p>
-
-            </section>
-
-            <section id="video-section">
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2ovhbT-Iulc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
-
-
-            <section id="contact-section">
-                <form action="https://www.freecodecamp.com/email-submit" id="form">
-                    <div class="form__group">
-                        <input type="text" class="form__input" placeholder="name" id="name" name="name" required>
-                        <label for="name" class="form__label" id="name-label">Name</label>
+                <div class="row clear-fix">
+                    
+                    <div class="col-1-of-2">
+                        <h4 class="quaternary-heading u-margin-top-sm-bottom-xs">You're addicted.</h4>
+                        <p class="paragraph">Extraction carajillo breve pumpkin coffee au steamed ristretto 
+                            barista kopi-luwak filter, aged instant whipped Aged shot As 
+                            Aftertaste lungo.</p>
+                    
+                        <h4 class="quaternary-heading u-margin-top-sm-bottom-xs">It's the only thing that keeps you going. You're dead inside.</h4>
+                        <p class="paragraph">Turkish pot single cappuccino americano robusta that 
+                            Blue, ristretto seasonal shop foam java Arabica latte pumpkin.</p>
+                   
+                        <h4 class="quaternary-heading u-margin-top-sm-bottom-xs">You think you're an social media influencer.</h4>
+                        <p class="paragraph">Foam cinnamon cream grounds caffeine cappuccino Beans filter 
+                            saucer macchiato, redeye Aftertaste aromatic 
+                            whipped dark As, Barista Affogato cup Black wings. </p>
+                   
                     </div>
 
-                    <div class="form__group">
-                        <input type="email" class="form__input" placeholder="Email address" id="email" name="email" required>
-                        <label for="email" class="form__label" id="email-label">Email address</label>
+                    <div class="col-1-of-2">
+                        <h4 class="quaternary-heading u-margin-top-sm-bottom-xs">I was making coffee before it was cool.</h4>
+                        <p class="paragraph">Id pot robusta pumpkin and beans robust Aromatic et, seasonal panna
+                             mountain macchiato half extraction sugar, french steamed
+                              spoon go aftertaste.</p>
+                    
+                        <h4 class="quaternary-heading u-margin-top-sm-bottom-xs">It's black, like my soul.</h4>
+                        <p class="paragraph">Aroma extra mocha aftertaste milk Au Barista irish. Cinnamon steamed origin 
+                            americano lait As redeye.</p>
+                   
+                        <h4 class="quaternary-heading u-margin-top-sm-bottom-xs">I'm in a hurry.</h4>
+                        <p class="paragraph">Affogato Blue aged origin kopi-luwak steamed shot dark, americano 
+                            Aftertaste pumpkin percolator medium whipped siphon to, ut as frappuccino 
+                            Affogato organic. </p>
+                   
+                    </div>
+                </div>
+            </section>
+
+            <section id="pricing-section" class="section">
+                <div class="section-description">
+                    <h3 class="tertiary-heading">Most popular coffee</h3>
+                    <p class="paragraph u-margin-top-sm">Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma press viennese</p> 
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        
+                        <div class="card">
+                            <div class="top-card">
+                            <div class="popular">&nbsp;</div>
+                           
+                                <h4 class="card-heading">
+                                    <span class="card-heading-span">Individual</span>
+                                </h4>
+                                <div class="card-price-box">
+                                        
+                                        <p class="card-price-value">$20</p>
+                                        <p class="card-price-month">/Month</p>
+                                    </div>
+                            </div>
+                                <div class="card-details">
+                                    <ul>
+                                        <li>Subscribe &amp; save, plus never pay shipping</li>
+                                        <li>Roasted fresh &amp; delivered direct to you</li>
+                                        <li>A curated selection of our most approachable coffees</li>
+                                        <li>Enough coffee for an Individual for a month</li>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-container">
+                                    <input class="btn btn-other btn-big" type="button" id="buy-individual" value="Buy Individual">
+
+                                </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <input type="submit" id="submit" value="Sign Up">
+                    <div class="col-1-of-3">
+                        
+                        <div class="card">
+                            <div class="top-card">
+                            <div class="most-popular popular">Most Popular</div>
+                            
+                                <h4 class="card-heading">
+                                    <span class="card-heading-span">Family</span>
+                                </h4>
+                            
+                                <div class="card-price-box">
+                                    <p class="card-price-value">$60</p>
+                                    <p class="card-price-month">/Month</p>
+                                </div>
+                            </div>
+                                <div class="card-details">
+                                    <ul>
+                                        <li>Subscribe &amp; save, plus never pay shipping</li>
+                                        <li>Roasted fresh &amp; delivered direct to you</li>
+                                        <li>A curated selection of our most approachable coffees</li>
+                                        <li>Free thermos travel mug</li>
+                                        <li>Enough coffee for a family for a month</li>
+                                    </ul>
+                                </div>
+
+                                <div class="btn-container">
+                                    <input class="btn btn-cta btn-big" type="button" id="buy-family" value="Buy Family">
+                                </div>
+
+                        </div>
                     </div>
-                </form>
+
+                    <div class="col-1-of-3">
+                        
+                        <div class="card">
+                            <div class="top-card">
+                                <div class="popular">&nbsp;</div>
+         
+                                <h4 class="card-heading">
+                                    <span class="card-heading-span">Business</span>
+                                </h4>
+                                <div class="card-price-box">
+                                    <p class="card-price-value">$120</p>
+                                    <p class="card-price-month">/Month</p>
+                                </div>
+                               </div>
+                                <div class="card-details">
+                                    <ul>
+                                        <li>Subscribe &amp; save, plus never pay shipping</li>
+                                        <li>Roasted fresh &amp; delivered direct to you</li>
+                                        <li>A curated selection of our most approachable coffees</li>
+                                        <li>Free thermos travel mug, airtight canister, and silver plated scoop</li>
+                                        <li>Enough coffee for 10 people for a month</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-container"> 
+                                    <input class="btn btn-other btn-big" type="button" id="buy-business" value="Buy Business">
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="video-section" class="section u-section-padding-xl">
+
+                <div class="row">
+
+                    <div class="col-1-of-2">
+                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2ovhbT-Iulc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="col-1-of-2">
+                        <h3 class="tertiary-heading">Let's talk about Horton Coffee.</h3>
+                        <p class="paragraph u-margin-top-sm">Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma as trade pot, 
+                            siphon press caffeine foam plunger breve est lungo carajillo, extraction medium 
+                            shot viennese irish As steamed so cup. Steamed acerbic percolator white to 
+                            caramelization Bar panna viennese cinnamon kopi-luwak americano au whipped, 
+                            Beans crema decaffeinated robusta black Aroma lungo sugar mazagran Cappuccino 
+                            grounds Au. Carajillo frappuccino con espresso bar iced dark in origin, 
+                            cappuccino press variety Aroma shot Affogato extraction. Robust And press 
+                            mazagran As cortado blue et plunger fair spice, extra instant at  breve shop 
+                            Affogato viennese french qui in, organic java caramelization au panna iced 
+                            robusta kopi-luwak and.</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="contact-section" class="section">
+
+                <div class="row">
+                    <div class="contact-form-container">
+
+                        <div class="contact-form">
+                            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                                <div>
+                                    <h2 class="tertiary-heading">
+                                        Sign up for our weekly newsletter
+                                    </h2>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name" class="form-label" id="name-label">Name</label>
+                                    <input type="text" class="form-input" placeholder="Name" id="name" name="name" required>
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="email" class="form-label" id="email-label">Email address</label>
+                                    <input type="email" class="form-input" placeholder="Email address" id="email" name="email" required>
+                                </div>
+            
+                                <div class="form-group">
+                                    <input type="submit" id="submit" value="Sign Up" class="btn btn-cta btn-form">
+                                </div>
+                            </form>
+                        </div>
+                        
+    
+                    </div>
+                </div>
+                
             </section>
 
         </main>
-     
 
+        <footer id="footer">
+            <div class="row">
+                <div class="footer-logo-container">
+                    <a href="#header"><img src="imgs/horton-coffee.png" alt="Horton Coffee Logo" id="footer-img"></a>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-1-of-3">
+                    
+                    <h4 class="footer-heading">Horton Coffee</h4>
+                    <p class="footer-paragraph">Organic mazagran lungo Brewed 
+                        turkish ut Americano java sugar origin grounds, 
+                        caramelization aged cream.</p>
+                </div>
+
+                <div class="col-1-of-3">
+                    <h4 class="footer-heading">Related links</h4>
+                    <div class="row">
+                        <div class="col-1-of-2">
+                            <ul>
+                                <li><a class="footer-link" href="#contact-section">Contact Us</a></li>
+                                <li><a class="footer-link" href="#pricing-section">Pricing</a></li>
+                                <li><a class="footer-link" href="#coffee-types-section">Types</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-1-of-2">
+                            <ul>
+                                <li><a class="footer-link" href="#">Forum</a></li>
+                                <li><a class="footer-link" href="#">Affiliates</a></li>
+                                <li><a class="footer-link" href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-of-3">
+                    <div class="attribution">
+                        <h4 class="footer-heading">Coded and designed by:</h4>
+                            <p class="footer-paragraph">Alex Johnson for freeCodeCamp's Responsive Web Design Projects - Build a Product Landing Page. Everything on this page is based off 
+                                <a target="_blank" href="https://www.youtube.com/user/Cracked" class="footer-link">Cracked</a>'s 'If Coffee Commercials Were Honest' Youtube Video. Images are from Unsplash. Logo was made with <a target="_blank" href="https://www.freelogodesign.org/" class="footer-link">FreeLogoDesign</a>.</p>
+                             <div class="attribution-link-container u-border-top">
+                                <a class="footer-link" target="_blank" href="https://github.com/IAmAlexJohnson">GitHub</a>
+                                <a class="footer-link" target="_blank" href="https://twitter.com/IAmAlex_Johnson">Twitter</a>
+                                <a class="footer-link" target="_blank" href="https://codepen.io/IAmAlexJohnson">CodePen</a>
+                             </div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+            
+                
+        </footer>
+     
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
 </html>

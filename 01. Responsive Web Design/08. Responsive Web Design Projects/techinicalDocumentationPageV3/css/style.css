@@ -1,0 +1,23 @@
+
+
+.row {
+    max-width: 1440px;
+    margin: 0 auto;    
+}
+
+.row:not(:last-child) {
+    margin-bottom: 100px;
+}
+    
+
+[class^="col-"] {
+    float: left;
+}
+
+.col-1-of-3 {
+    width: calc((100% - 2 * 60px) / 3);
+}
+
+.col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 60px) / 3) + 60px);
+}

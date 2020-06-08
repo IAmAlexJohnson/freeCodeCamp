@@ -1,5 +1,44 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+main {
+    position: relative;
+    top: -50px;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+ a:hover {
+    color: #1769cf;
+    /* color: #155bb1; */
+}
+
+ul {
+    list-style: none;
+}
+
+pre {
+    /* margin: 1em; */
+    color: rgb(57, 145, 69);
+    font-family: 'Fira Code', monospace;
+}
+
+/*========================= GRID ========================*/
 .row {
     max-width: 1440px;
     margin: 0 auto;    
@@ -14,10 +53,216 @@
     float: left;
 }
 
-.col-1-of-3 {
-    width: calc((100% - 2 * 60px) / 3);
+.col-1-of-4 {
+    width: calc((100% - 3 * 60px) / 4);
 }
 
-.col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 60px) / 3) + 60px);
+.col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 60px) / 4)+ 2 + 60px);
+}
+
+/*========================= NAV ========================*/
+
+nav {
+    position: fixed;
+    left:0;
+    top: 0;
+    bottom:0;
+    border-right: 2px solid rgba(0, 0, 0, 0.082);
+    background-color: #f7f7f7;
+    text-align: center;
+}
+nav ul {
+    height: 100%;
+    
+}
+
+nav ul li {
+    padding: .8em 2em;
+}
+
+nav ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+}
+
+#header-title {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+/*========================= SECTION ========================*/
+#page-content {
+    margin-left: 20%;
+}
+
+.section-heading {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#Reference{
+    margin-bottom: 100px;
+}
+
+/*========================= MEDIA QUERIES ========================*/
+footer {
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.082);
+    background-color: #F7F7F7;
+    /* color: #FFF; */
+    font-size: .7em;
+    font-weight: 600;
+    text-align: center;
+    height: 60px;
+    padding-top: 1em;
+    line-height: 1.3;
+}
+
+.footer-link:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.233);
+}
+.footer-link {
+    padding:0 1em;
+}
+
+/*========================= MEDIA QUERIES ========================*/
+
+@media only screen and (max-width: 100em) {    /* 1600 */
+    #page-content {
+        margin-left: 25%;
+    }
+
+}
+@media only screen and (max-width: 81.25em) {    /* 1300 */
+    #header-title {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 68.75em) {    /* 1000 */
+    main {
+        top: 0;
+    }
+    /*========= NAV ==========*/
+        nav {
+            position: relative;
+            width: 100%;
+            border-right: none;
+        }
+        nav ul li {
+            padding: .2em 2em;
+        }
+    
+        #header-title {
+            margin: 0;
+            padding: 1em 0;
+        }
+    
+    /*========= GRID ==========*/
+        .row {
+            width: 100%;
+        }
+        
+        .row:not(:last-child) {
+            margin-bottom: 0px;
+        }
+            
+        
+        [class^="col-"] {
+            float: clear;
+        }
+        
+        .col-1-of-4 {
+            width: 100%;
+        }
+        
+        .col-3-of-4 {
+            width: 100%;
+        }
+    
+    
+    /*=========== SECTION =======*/
+        #page-content {
+            margin-left: 0%;
+            padding: 0 2em;
+            
+        }
+}
+
+
+/*=============== HEIGHT =================*/
+@media only screen and (max-height: 51.875em) {    /* 830 */
+    nav ul li {
+        padding: .6em 2em;
+    }
+}
+
+@media only screen and (max-height: 45.625em) {    /* 730 */
+    nav ul li {
+        padding: .2em 2em;
+    }
+}
+
+@media only screen and (max-height: 34.6875em) {    /* 555 */
+    nav ul li {
+        padding: 0em 2em;
+    }
+}
+
+@media only screen and (max-height: 29.6875em) {    /* 475 */
+
+    main {
+        top: 0;
+    }
+/*========= NAV ==========*/
+    nav {
+        position: relative;
+        width: 100%;
+        border-right: none;
+    }
+    nav ul li {
+        padding: .2em 2em;
+    }
+
+    #header-title {
+        margin: 0;
+        padding: 1em 0;
+    }
+
+/*========= GRID ==========*/
+    .row {
+        width: 100%;
+    }
+    
+    .row:not(:last-child) {
+        margin-bottom: 0px;
+    }
+        
+    
+    [class^="col-"] {
+        float: clear;
+    }
+    
+    .col-1-of-4 {
+        width: 100%;
+    }
+    
+    .col-3-of-4 {
+        width: 100%;
+    }
+
+
+/*=========== SECTION =======*/
+    #page-content {
+        margin-left: 0%;
+        padding: 0 2em;
+        
+    }
+    
 }

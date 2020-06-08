@@ -198,49 +198,51 @@
 /* ================ */
   // Where do I Belong
   function getIndexToIns(arr, num) {
-    // Find my place in this sorted array.
 
-    arr = arr.sort((a,b) => a > b);
-
+    arr.sort((a,b) => a - b); 
+ 
     for(let i = 0; i < arr.length; i++){
-     if(num <= arr[i]){
-        return i;
-      }
+        if(arr[i] >= num){
+          return i;
+  
+        } else if(arr[arr.length-1] < num){
+          return arr.length;
+        }
     }
-      return arr.length;
-
-
+    return 0;
   }
-
+  
   getIndexToIns([], 1);
+
 
 /* ================ */
   // Mutations
-    function mutation(arr) {
-      arr[0] = arr[0].toLowerCase();
-      arr[1] = arr[1].toLowerCase();
-        for(let j = 0; j < arr[1].length; j++){
-          if(arr[0].indexOf(arr[1][j]) == -1){
-            return false;
-          }
-      }
-      return true;
-    }
+  function mutation(arr) {
 
-    mutation(["hello", "hey"]);
+    let secondWord = arr[1].toLowerCase().split("");
+  
+    for(let i = 0; i < secondWord.length; i++){
+      if(arr[0].toLowerCase().indexOf(secondWord[i]) == -1){
+        return false;
+      }
+    }
+    return true;
+  
+  }
+  
+  mutation(["Mary", "Army"]);
 
 /* ================ */
   // Chunky Monkey
   function chunkArrayInGroups(arr, size) {
-    // Break it up.
-    let newArr = [];
-    while (arr.length) {
-      // While length is NOT zero do ...
-      console.log(arr, "original");
-      console.log(newArr, "new");
-      newArr.push(arr.splice(0,size));
-    }
-    return newArr;
-  }
 
+    let chunkedArr = [];
+  
+    for(let i = 0; i < arr.length; i + size){
+      chunkedArr.push(arr.slice(i, i += size));
+    }
+  
+    return chunkedArr;
+  }
+  
   chunkArrayInGroups(["a", "b", "c", "d"], 2);

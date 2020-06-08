@@ -1,488 +1,357 @@
-/* ========================== */
-  // Sum All Numbers in a Range
-  function sumAll(arr) {
-    let sum = 0;
-    let sortedArr = arr.sort((a,b) => a - b);
-    // sort lowest to highest
-    console.log(sortedArr, "SORTED");
-    for(let i = arr[0]; i <= sortedArr[1]; i++){
-      sum += i;
-      console.log(sum, "SUM");
-    }
-    return sum;
+// alert("Connected!");
+
+/* ========================================================== */
+
+/*  Sum All Numbers in a Range */
+
+function sumAll(arr) {
+  let sum = 0;
+  let newArr = [];
+  arr = arr.sort(function(a, b){return a-b});
+  console.log(arr);
+  for (let i = arr[0]; i <= arr[1]; i++){
+       sum += i;
   }
+  //console.log(sum);
+  return sum;
+}
 
-  sumAll([4, 1]);
+sumAll([1, 4]);
+sumAll([4, 1]);
+sumAll([10,5]);
+sumAll([5, 10]);
 
-/* ========================== */
-  // Diff Two Arrays
-    function diffArray(arr1, arr2) {
-      var newArr = [];
-      // Same, same; but different.
-      for(let i =0; i < arr1.length; i++){
-        if(arr2.indexOf(arr1[i]) == -1){
+
+
+// loop though num1 to num2 and push to array
+// cycle through new array and add together
+
+
+/* 
+  sumAll([1, 4]) should return a number.
+  sumAll([1, 4]) should return 10.
+  sumAll([4, 1]) should return 10.
+  sumAll([5, 10]) should return 45.
+  sumAll([10, 5]) should return 45.
+*/
+/* ========================================================== */
+
+/* Diff Two Arrays */
+
+function diffArray(arr1, arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++){
+      if(arr2.indexOf(arr1[i]) == -1){
           newArr.push(arr1[i]);
-          console.log(newArr, "FIRST");
-        }
       }
-       for(let j =0; j < arr2.length; j++){
-        if(arr1.indexOf(arr2[j]) == -1 && newArr.indexOf(arr2[j]) == -1){
+  }
+  for (let j = 0; j < arr2.length; j++){
+      if(arr1.indexOf(arr2[j]) == -1){
           newArr.push(arr2[j]);
-          console.log(newArr, "SECOND");
-        }
       }
-      return newArr;
-    }
-
-    diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
-
-/* ========================== */
-  // Seek and Destroy
-  function destroyer(arr1, ...arr2) {
-    // Remove all the values
-    let newArr = arr1;
-    console.log(arr1, "ARR");
-    console.log(arr2, "ARR2");
-    for(let j =0; j < newArr.length; j++){
-      for(let i =0; i < arr2.length; i++){
-        if(newArr[j] === arr2[i]){
-          delete newArr[j];
-        }
-      }
-      // newArr = arr1.filter((val)=> val != arr2[i]);
-      console.log(newArr, "NEW ARR");
-    }
-    return newArr.filter((val)=> val !== Boolean);
   }
+  
+  return newArr;
+}
 
-  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
 
-/* ========================== */
-  // Wherefore art thou
-  function whatIsInAName(collection, source) {
-    // What's in a name?
-    let arr = collection.filter(
-      function(item) {
-        for(let i in source){
-          if(source[i] != item[i]){
-            return false;
+// Loop through arr1 and through arr2
+// if arr1[i] = arr[j] 
+
+/*
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.
+["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["pink wool"].
+["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return an array with one item.
+["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["diorite", "pink wool"].
+["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return an array with two items.
+["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"] should return [].
+["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"] should return an empty array.
+[1, 2, 3, 5], [1, 2, 3, 4, 5] should return [4].
+[1, 2, 3, 5], [1, 2, 3, 4, 5] should return an array with one item.
+[1, "calf", 3, "piglet"], [1, "calf", 3, 4] should return ["piglet", 4].
+[1, "calf", 3, "piglet"], [1, "calf", 3, 4] should return an array with two items.
+[], ["snuffleupagus", "cookie monster", "elmo"] should return ["snuffleupagus", "cookie monster", "elmo"].
+[], ["snuffleupagus", "cookie monster", "elmo"] should return an array with three items.
+[1, "calf", 3, "piglet"], [7, "filly"] should return [1, "calf", 3, "piglet", 7, "filly"].
+[1, "calf", 3, "piglet"], [7, "filly"] should return an array with six items.
+*/
+
+/* ========================================================== */
+
+/* Seek and Destroy */
+
+function destroyer(arr1, ...arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++){
+      
+          if(arr2.indexOf(arr1[i]) == -1){
+          newArr.push(arr1[i]);
+      } 
+      
+  }
+  console.log(`Args: ${arr2[0]}, ${arr2[1]}`);
+  console.log(`New Array: ${newArr}`);
+  return newArr;
+
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+/*
+  destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
+  destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].
+  destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].
+  destroyer([2, 3, 2, 3], 2, 3) should return [].
+  destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
+  destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan") should return [12,92,65].
+*/
+
+/* ========================================================== */
+
+/* Wherefore art thou */
+
+function whatIsInAName(collection, source) {
+
+  //filter through collection arr
+  let arr = collection.filter(function (e){
+      //look at every item in source
+      for(let i in source){
+          //console.log(i);
+          // if source is not the same as e return false
+          if(source[i] != e[i]){
+              return false;
           }
-        }
-        return true;
       }
-    );
-   return arr;
+      //otherwise return true and put in arr
+          return true;
+      
+  });
+  return arr;
+}
 
-    //fiter collection set to arr
-    //loop through source
-    //if source[i] isnt equal to item[i] return false
-    //else return true
-    //return arr
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 
+
+/*
+  whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }].
+  whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].
+  whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }) should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }].
+  whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }) should return [{ "apple": 1, "bat": 2, "cookie": 2 }].
+  whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 }) should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }].
+  whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}) should return []
+*/
+
+/* ========================================================== */
+
+/* Spinal Tap Case */
+
+// Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+function spinalCase(str) {
+  return str.replace(/([a-z])([A-Z])/g, '$1 $2').trim().replace(/_|\s/g,"-").toLowerCase();
+}
+
+spinalCase('This Is Spinal Tap');
+spinalCase("The_Andy_Griffith_Show");
+spinalCase("thisIsSpinalTap");
+
+/*
+  spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap".
+  spinalCase("thisIsSpinalTap") should return "this-is-spinal-tap".
+  spinalCase("The_Andy_Griffith_Show") should return "the-andy-griffith-show".
+  spinalCase("Teletubbies say Eh-oh") should return "teletubbies-say-eh-oh".
+  spinalCase("AllThe-small Things") should return "all-the-small-things".  
+*/
+
+
+/* ========================================================== */
+
+/* Pig Latin */
+
+function translatePigLatin(str) {
+
+  const vowels = /[aeiou]/;
+  
+  for(let i =0; i < str.length; i++){
+  
+    if(vowels.test(str.charAt(0))){
+  
+      return str + "way";
+  
+    } else if (vowels.test(str.charAt(i)) === true){
+  
+      return str.substring(i, str.length) +str.substring(0, i)+ "ay";
+        
+      } 
+    }
+    return str + "ay";
   }
+  
+  translatePigLatin("rhythm");
+  
 
-  whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
-/* ========================== */
-  // Spinal Tap Case
-    function spinalCase(str) {
-      // "It's such a fine line between stupid, and clever."
-      // --David St. Hubbins
 
-      /*   str.replace(regexp|substr, newSubstr|function)
-              $n	Where n is a positive integer less than 100, inserts the nth parenthesized
-              submatch string, provided the first argument was a RegExp object. Note that this is 1-indexed.
-                  replace where the lowercase letter meets the uppercase letter */
+/* ========================================================== */
 
-      let newStr = str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\s|_/g, '-').toLowerCase();
-      console.log(newStr, "REGEX");
-      return newStr;
-    }
+/* Search and Replace */
 
-    spinalCase("thisIsSpinalTap");
-/* ========================== */
-  // Pig Latin
-    function translatePigLatin(str) {
-      let letters = str.split("");
-      let arr = [];
-      let newStr ="";
-      for(let i = 0; i < letters.length; i++){
-        if(/[aeiou]/.test(letters[0])){
-          newStr = `${str}way`
-        } else if(/[aeiou]/.test(letters[i])) {
-          arr.push(letters.slice(i),letters.slice(0, i));
-          console.log(arr, "ARR");
-          newStr = `${arr.join("").split(",").join("")}ay`;
-          break;
-        } else {
-          newStr = `${str}ay`;
-        }
-       }
-       console.log(newStr, "END STRING");
-      return newStr;
-    }
 
-    translatePigLatin("california");
-    // translatePigLatin("paragraphs");
-    // translatePigLatin("glove");
-    // translatePigLatin("algorithm");
-    // translatePigLatin("eight");
-
-/* ========================== */
-  // Search and Replace
-    function myReplace(str, before, after) {
-    let newStr = str;
-    let capitalized = "";
-    if(/[A-Z]/.test(before[0])){
-      console.log("First Letter Capital");
-      capitalized = after.slice(0,1).toUpperCase() + after.slice(1);
-      return newStr.replace(before, capitalized);
-    }
-    return newStr.replace(before, after);
+function myReplace(str, before, after) {
+  let regex = new RegExp('(\\b'+before+'\\b)', 'gi');
+  if(before.charAt(0).match(/[A-Z]/)){
+    let capStr = after.replace(after.charAt(0), after.charAt(0).toUpperCase());
+    return str.replace(before, capStr);
+  }  else {
+    return str.replace(before, after);
   }
+  
+}
 
-  myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
-/* ========================== */
-  // DNA Pairing
-  function pairElement(str) {
-    let arr = [];
-    for(let i =0; i < str.length; i++){
-      if(str[i] == "A"){
-        arr.push(["A","T"]);
-      }else if(str[i] == "T") {
-        arr.push(["T","A"]);
-      }else if(str[i] == "G") {
-        arr.push(["G","C"]);
-      }else if(str[i] == "C") {
-        arr.push(["C","G"]);
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+/* ========================================================== */
+
+/* DNA Pairing */
+function pairElement(str) {
+  let finalArr = [];
+  let arr = str.split("");
+  console.log(arr);
+    for (let i =0; i < arr.length; i++){
+      console.log(arr[i]);
+      if(arr[i] == "G"){
+        finalArr.push(["G","C"]);
+      } else if(arr[i] == "C"){
+        finalArr.push(["C", "G"]);
+      }else if(arr[i] == "A"){
+        finalArr.push(["A", "T"]);
+      }else if(arr[i] == "T"){
+        finalArr.push(["T", "A"]);
       }
     }
-    console.log(arr);
-    return arr;
-  }
+  console.log(finalArr);
+  return finalArr;
+}
 
-  pairElement("GCG");
+pairElement("GCG");
 
-/* ========================== */
-  // Missing letters
-  function fearNotLetter(str) {
-    let arr = str.split("").map((letter)=> letter.charCodeAt());
-    console.log(arr, "STR ARR");
+/* ========================================================== */
 
-    for(let i = 0; i < arr.length; i++){
-      console.log(arr[i+1],"FIRST NUM", arr[i],"SECOND NUM");
-        if(arr[i+1] - arr[i] > 1){
-          console.log(String.fromCharCode(arr[i]+1), "MISSING LETTER");
-          return String.fromCharCode(arr[i]+1);
+/* Missing letters */
+function fearNotLetter(str) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let alphabetStart = 0;
+  
+  for(let i = 0; i < str.length; i++){
+    for(let j = 0; j < alphabet.length; j++){
+      if(str.charAt(0) == alphabet.charAt(j)){
+        alphabetStart = j;
+        // return alphabet.charAt(j);
+        if(str.charAt(i) !== alphabet.charAt(alphabetStart +i )){
+          console.log(alphabetStart +i);
+          return alphabet.charAt(alphabetStart + i);  
         }
       }
-
-    return undefined;
+      
+    }
   }
+}
 
-  fearNotLetter("abce");
+// fearNotLetter("abce");
+// fearNotLetter("stvwx");
+fearNotLetter("bcdf");
 
-/* ========================== */
-  // Sorted Union
-  function uniteUnique(arr) {
+  /* ========================================================== */
+
+   /* Sorted Union */
+   function uniteUnique(arr) {
 
     for (let i = 0 ; i < arguments.length ; i++){
       arr = arr.concat(arguments[i]);
     }
-     console.log(arr, "ARR CONCATENATED");
-
-   /*
-        array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
-
-        total	Required. The initialValue, or the previously returned value of the function
-        currentValue	Required. The value of the current element
-        currentIndex	Optional. The array index of the current element
-        arr	Optional. The array object the current element belongs to
-  */
-    let newArr = arr.reduce(function(arr,item){
-      console.log(arr, "ARR");
-      console.log(item, "ITEM");
-      if (arr.includes(item) === false){
-        //if it is not a dup push it
-        arr.push(item);
-      }
-      return arr;
-    },[]);
-
-    return newArr;
-
-  }
-
-  uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
-
-/* ========================== */
-  // Convert HTML Entities
-  function convertHTML(str) {
-    // &colon;&rpar;
-
-    let entities = {
-      "&" : "&amp;",
-      "<" : "&lt;",
-      ">" : "&gt;",
-      '"' : "&quot;",
-      "'" : "&apos;"
+    
+    var uniqueNums = arr.filter((element, index, arr) => arr.indexOf(element) === index); 
+    return uniqueNums;
     }
-    let newStr = str.split("").map((char) => entities[char] || char);
-    return newStr.join("");
+  
+    uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+  
+   /* ========================================================== */
+
+   /* Convert HTML Entities */
+   function convertHTML(str) {
+
+    let htmlEntities = {
+      '!':'&excl;',
+      '&':'&amp;',
+      '<':'&lt;', 
+      '>':'&gt;', 
+      '"':'&quot;',
+      "'":'&apos;'
+    };
+   return  str.replace(/&|!|<|>|"|'/g, function(match){ return htmlEntities[match];});
+     
   }
+  
+  convertHTML("Dolce & Gabbana");
+  
+     /* ========================================================== */
 
-  // convertHTML("Dolce & Gabbana");
-  convertHTML("Hamburgers < Pizza < Tacos");
-  // convertHTML("Sixty > twelve");
-  // convertHTML('Stuff in "quotation marks"');
-  // convertHTML("Schindler's List");
-  // convertHTML("<>");
-  // convertHTML("abc");
+   /* Sum All Odd Fibonacci Numbers */
 
-/* ========================== */
-  // Sum All Odd Fibonacci Numbers
-    function sumFibs(num) {
-      let arr = [1,1];
-      let fibNum = 0;
-      let result = 0;
-      while(fibNum < num){
-        fibNum = arr.slice(-1)[0] + arr.slice(-2)[0];
-        console.log(fibNum, "FIBNUM");
-        if(fibNum <= num){
-          arr.push(fibNum);
+   function sumFibs(num) {
+
+    let fibonacciNums = [0,1];
+    let fibonacciSum = 0;
+    let i = 0;
+  
+    while(num > fibonacciNums[fibonacciNums.length-1]){
+  
+      fibonacciNums.push(fibonacciNums[i] + fibonacciNums[i+1]);
+  
+      i++;
+    }
+  
+    if(fibonacciNums[fibonacciNums.length-1] > num){
+      fibonacciNums.pop();
+    }
+  
+    fibonacciSum += fibonacciNums.map(a => a % 2 !== 0 ? a : 0).reduce((a,b) => a+b);
+    return fibonacciSum;
+  
+  }
+  
+  sumFibs(4);
+  
+
+         /* ========================================================== */
+
+   /* Sum All Primes */
+   function sumPrimes(num) {
+     let primeNums = [];
+     
+     for(let i = 2; i <= num; i++){
+      for(let j = 2; j <= i; j++){
+        
+        if(i == j){
+          primeNums.push(i);
         }
-      }
-      console.log(arr, "ARR");
-      result = arr.filter((e) => e % 2 !== 0).reduce((a,b) => a+b);
-      console.log(result, "RESULT");
-      return result;
-    }
 
-    sumFibs(10);
-
-/* ========================== */
-  // Sum All Primes
-  function sumPrimes(num) {
-    let primeNum = [];
-
-    for(let i = 2; i <= num; i++){
-      if(isPrime(i)){
-        primeNum.push(i);
-        console.log(`${primeNum} PRIME NUMBER ARRAY)`);
-      }
-    }
-    console.log(`${primeNum.reduce((a,b)=> a+b)} RESULTS`);
-    return primeNum.reduce((a,b)=> a+b);
-  }
-
-
-  function isPrime(num) {
-    for(let i = 2; i < num; i++){
-      if(num % i === 0){
-        return false;
-      }
-    }
-    return true;
-  }
-
-  sumPrimes(10);
-
-/* ========================== */
-  // Smallest Common Multiple
-  // function smallestCommons(arr) {
-  //   let sortedArr = arr.sort((a,b) => a>b);
-  //   let newArr = [];
-  //   let lowestMultiple = 0;
-  //   let isTrue = true;
-  //
-  //   for(let i = sortedArr[0]; i <= sortedArr[sortedArr.length-1]; i++ ){
-  //     newArr.push(i);
-  //   }
-  //   console.log(newArr);
-  //
-  //   while(isTrue){
-  //     lowestMultiple++;
-  //     for(let j = newArr[0]; j <= newArr[newArr.length-1]; j++){
-  //         if(lowestMultiple % j !== 0){
-  //           break;
-  //         } else if(j == newArr[newArr.length-1]){
-  //           isTrue = false;
-  //         }
-  //     }
-  //   }
-  //   console.log(lowestMultiple, "LOWEST COMMON MULTIPLE");
-  //   return lowestMultiple;
-  // }
-  //
-  // smallestCommons([1,13]);
-  function smallestCommons(arr) {
-    let tmp = [];
-    let min = Math.min(arr[0], arr[1]);
-    let max = Math.max(arr[0], arr[1]);
-    for(let i = min; i <= max; i++) {
-      tmp.push(i);
-    }
-
-    function gcd(a, b) {
-      if (b===0){
-        return a;
-      } else {
-        return gcd(b, a%b);
-      }
-    }
-
-    function lcm(a,b) {
-      return a*b/gcd(a,b);
-    }
-
-
-    return tmp.reduce(function(a,b) {
-      return lcm(a,b);
-    });
-  }
-
-
-  smallestCommons([1,5]);
-
-/* ========================== */
-
-  function dropElements(arr, func) {
-    // Drop them elements.
-    let newArr = arr;
-    let length = newArr.length;
-    for (let i = 0; i < length; i++){
-     // console.log(`${func(arr[i])} FUNCTION
-     //               ${i} i VALUE
-    //              ${newArr[i]} ARRAY VALUE`);
-      if(func(newArr[0])){
-        break;
-      }  else {
-        newArr.shift();
-        //console.log(`${newArr} NEW ARR`);
-      }
-    }
-      return newArr;
-  }
-
-
-  dropElements([1, 2, 3, 4], function(n) {return n > 5;});
-
-/* ========================== */
-  function steamrollArray(arr){
-    let newArr = arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(steamrollArray(val)) : acc.concat(val), []);
-
-    return newArr;
-  }
-
-  steamrollArray([1, [2], [3, [[4]]]]);
-  // Steamroller
-  // let newArr = [];
-  // function steamrollArray(arr) {
-  //   // I'm a steamroller, baby
-  //   for (let i = 0; i < arr.length; i++){
-  //     if(!Array.isArray(arr[i])){
-  //       newArr.push(arr[i]);
-  //       } else {
-  //         steamrollArray(arr[i]);
-  //     }
-  //   }
-  //   console.log(`${newArr} NEWARR`);
-  //   return newArr;
-  // }
-
-/* ========================== */
-  // Binary Agents
-  function binaryAgent(str) {
-    let arr = str.split(" ").map((val) => String.fromCharCode(parseInt(val, 2)));
-    return arr.join("");
-  }
-
-  binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
-
-/* ========================== */
-  // Everything Be True
-  function truthCheck(collection, pre) {
-    // Is everyone being true?
-
-    // Can't use dot notation because 'pre' is a argument and with dot notation
-    // it will look for the word 'pre' and not what is stored in it.
-    console.log( collection.every((obj) => obj[pre]));
-    return collection.every((obj) => obj[pre]);
-  }
-
-  truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
-
-/* ========================== */
-  // Arguments Optional
-  function addTogether(a, b) {
-    let result;
-    const args = Array.prototype.slice.call(arguments);
-    if (args.every(function(val) {
-            return typeof val == 'number';
-        })) {
-        if (args.length === 1) {
-            return function(c) {
-                if (typeof c == 'number'){
-                    return result = a + c;
-                }
-            }
+        if(i % j == 0){
+          break;
         }
-        else {
-            result = a + b;
-        }
+        
+     }
     }
-    return result;
-  }
-  addTogether(2,3);
-
-/* ========================== */
-  // Make a Person
-  var Person = function(firstAndLast) {
-    // Complete the method below and implement the others similarly
-    let arr = firstAndLast.split(" ");
-
-    this.getFirstName = function() {
-      return arr[0];
-    };
-   this.getLastName = function() {
-      return arr[1];
-    };
-    this.getFullName = function() {
-      return arr.join(" ");
-    };
-    this.setFirstName = function(first) {
-      arr[0] = first;
-    };
-    this.setLastName = function(last) {
-      arr[1] = last;
-    };
-    this.setFullName = function(firstAndLast) {
-      let splitNames = firstAndLast.split(" ");
-      this.setFirstName(splitNames[0]);
-      this.setLastName(splitNames[1]);
-    };
-  };
-
-  var bob = new Person('Bob Ross');
-  console.log(Object.keys(bob).length);
-  bob.getFullName();
-
-/* ========================== */
-  // Map the Debris
-
-  function orbitalPeriod(arr) {
-    let GM = 398600.4418;
-    let earthRadius = 6367.4447;
-
-    let newArr =[];
-    for(let i = 0; i < arr.length; i++){
-      let result = Math.round(2 * Math.PI * Math.sqrt(Math.pow(arr[i].avgAlt + earthRadius, 3) / GM));
-      newArr.push([{name:arr[i].name, orbitalPeriod: result}]);
-    }
-    console.log(newArr);
-    return newArr;
+    console.log(primeNums);
+    return primeNums.reduce((a,b)=> {return a+b});
 
   }
+  
+  // sumPrimes(10);
+  sumPrimes(977);
+  
 
+/* ========================================================== */
 
-  // orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
-  orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]);
+   /* Smallest Common Multiple */

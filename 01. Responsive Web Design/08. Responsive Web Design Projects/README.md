@@ -7,7 +7,7 @@
 |                   [Build a Tribute Page GitHub](https://htmlpreview.github.io/?https://github.com/IAmAlexJohnson/freeCodeCamp/blob/master/01.%20Responsive%20Web%20Design/08.%20Responsive%20Web%20Design%20Projects/tributePageV3/index.html) | [Build a Tribute Page CodePen](https://codepen.io/IAmAlexJohnson/full/GRoRojj)  |
 |                         [Survey Form GitHub](https://htmlpreview.github.io/?https://github.com/IAmAlexJohnson/freeCodeCamp/blob/master/01.%20Responsive%20Web%20Design/08.%20Responsive%20Web%20Design%20Projects/surveyFormV3/index.html)   | [Survey Form CodePen](https://codepen.io/IAmAlexJohnson/full/RwrNKKq) |
 |           [Product Landing Page GitHub](https://htmlpreview.github.io/?https://github.com/IAmAlexJohnson/freeCodeCamp/blob/master/01.%20Responsive%20Web%20Design/08.%20Responsive%20Web%20Design%20Projects/productLandingPageV3/index.html)        | [Product Landing Page CodePen](https://codepen.io/IAmAlexJohnson/full/ZEQGagK) |
-| [Technical Documentation Page GitHub]()          | [Technical Documentation Page CodePen]() |
+| [Technical Documentation Page GitHub](https://htmlpreview.github.io/?https://github.com/IAmAlexJohnson/freeCodeCamp/blob/master/01.%20Responsive%20Web%20Design/08.%20Responsive%20Web%20Design%20Projects/techinicalDocumentationPageV3/index.html)          | [Technical Documentation Page CodePen](https://codepen.io/IAmAlexJohnson/full/gOPpNOe) |
 |                    [Personal Portfolio GitHub]() | [Personal Portfolio CodePen]()  |
 
 

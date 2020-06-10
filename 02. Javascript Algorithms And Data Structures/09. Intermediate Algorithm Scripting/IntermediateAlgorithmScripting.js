@@ -421,28 +421,89 @@ fearNotLetter("bcdf");
 
    /* Arguments Optional */
 
-   function addTogether(a,b) {
+   function addTogether() {
 
-    if(typeof a !== "number"){
-      console.log(`A: ${undefined}`);
-      return undefined;
-    }
-    if(b !== undefined && typeof b !== "number"){
-      console.log(`B: ${undefined}`);
-      return undefined;
-    }
+    if(arguments.length == 2){
   
+      if(typeof arguments[0] === "number" && typeof arguments[1] === "number"){
+        return arguments[0] + arguments[1]; 
+      }
+      
+    } else if(arguments.length == 1){
+  
+      if(typeof arguments[0] === "number"){
+  
+      let firstArg = arguments[0];
+  
+      let addAgain = function(secondArg){
+  
+        return addTogether(firstArg, secondArg)};
+        return addAgain;
+      } 
+    } else {
+      return undefined;
+    }
     
-    return a + b;
   }
   
-  addTogether(2, 3);
+  console.log(addTogether(5)(7));
 
   /* ========================================================== */
 
    /* Make a Person */
 
+   var Person = function(firstAndLast) {
+    // Complete the method below and implement the others similarly
+    
+    let arr = firstAndLast.split(" ");
+  
+    this.getFullName = function() {
+      return `${arr[0]} ${arr[1]}`;
+    };
+    this.getFirstName = function() {
+      return arr[0];
+    };
+  
+    this.getLastName = function() {
+      return arr[1];
+    };
+  
+    
+    this.setFullName = function(firstAndLast) {
+       let arr2 = firstAndLast.split(" ");
+       this.setFirstName(arr2[0]);
+       this.setLastName(arr2[1]);
+    };
+    this.setFirstName = function(firstName) {
+      arr[0] =  firstName;
+    };
+    this.setLastName = function(lastName) {
+      arr[1] =  lastName;
+    };
+    
+  };
+  
+  var bob = new Person('Bob Ross');
+  console.log(bob.getFullName());
+
  
    /* ========================================================== */
 
    /* Map the Debris */
+   function orbitalPeriod(arr) {
+
+    let GM = 398600.4418;
+    let earthRadius = 6367.4447;
+  
+  
+    for(let i = 0; i < arr.length; i++){
+  
+      arr[i].orbitalPeriod = Math.round((2 * Math.PI)*((Math.sqrt(Math.pow(earthRadius + arr[i].avgAlt, 3)/GM))));
+      delete arr[i].avgAlt; 
+    }
+  
+    return arr;
+  }
+  
+  orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+  

@@ -21,19 +21,6 @@ sumAll([4, 1]);
 sumAll([10,5]);
 sumAll([5, 10]);
 
-
-
-// loop though num1 to num2 and push to array
-// cycle through new array and add together
-
-
-/* 
-  sumAll([1, 4]) should return a number.
-  sumAll([1, 4]) should return 10.
-  sumAll([4, 1]) should return 10.
-  sumAll([5, 10]) should return 45.
-  sumAll([10, 5]) should return 45.
-*/
 /* ========================================================== */
 
 /* Diff Two Arrays */
@@ -55,28 +42,7 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
 
-// Loop through arr1 and through arr2
-// if arr1[i] = arr[j] 
-
-/*
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.
-["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["pink wool"].
-["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return an array with one item.
-["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["diorite", "pink wool"].
-["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return an array with two items.
-["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"] should return [].
-["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"] should return an empty array.
-[1, 2, 3, 5], [1, 2, 3, 4, 5] should return [4].
-[1, 2, 3, 5], [1, 2, 3, 4, 5] should return an array with one item.
-[1, "calf", 3, "piglet"], [1, "calf", 3, 4] should return ["piglet", 4].
-[1, "calf", 3, "piglet"], [1, "calf", 3, 4] should return an array with two items.
-[], ["snuffleupagus", "cookie monster", "elmo"] should return ["snuffleupagus", "cookie monster", "elmo"].
-[], ["snuffleupagus", "cookie monster", "elmo"] should return an array with three items.
-[1, "calf", 3, "piglet"], [7, "filly"] should return [1, "calf", 3, "piglet", 7, "filly"].
-[1, "calf", 3, "piglet"], [7, "filly"] should return an array with six items.
-*/
 
 /* ========================================================== */
 
@@ -99,14 +65,6 @@ function destroyer(arr1, ...arr2) {
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
-/*
-  destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
-  destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].
-  destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].
-  destroyer([2, 3, 2, 3], 2, 3) should return [].
-  destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
-  destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan") should return [12,92,65].
-*/
 
 /* ========================================================== */
 
@@ -134,15 +92,6 @@ function whatIsInAName(collection, source) {
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 
 
-/*
-  whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }].
-  whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].
-  whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }) should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }].
-  whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }) should return [{ "apple": 1, "bat": 2, "cookie": 2 }].
-  whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 }) should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }].
-  whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}) should return []
-*/
-
 /* ========================================================== */
 
 /* Spinal Tap Case */
@@ -152,17 +101,7 @@ function spinalCase(str) {
   return str.replace(/([a-z])([A-Z])/g, '$1 $2').trim().replace(/_|\s/g,"-").toLowerCase();
 }
 
-spinalCase('This Is Spinal Tap');
-spinalCase("The_Andy_Griffith_Show");
 spinalCase("thisIsSpinalTap");
-
-/*
-  spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap".
-  spinalCase("thisIsSpinalTap") should return "this-is-spinal-tap".
-  spinalCase("The_Andy_Griffith_Show") should return "the-andy-griffith-show".
-  spinalCase("Teletubbies say Eh-oh") should return "teletubbies-say-eh-oh".
-  spinalCase("AllThe-small Things") should return "all-the-small-things".  
-*/
 
 
 /* ========================================================== */
@@ -257,8 +196,6 @@ function fearNotLetter(str) {
   }
 }
 
-// fearNotLetter("abce");
-// fearNotLetter("stvwx");
 fearNotLetter("bcdf");
 
   /* ========================================================== */
@@ -308,7 +245,6 @@ fearNotLetter("bcdf");
     while(num > fibonacciNums[fibonacciNums.length-1]){
   
       fibonacciNums.push(fibonacciNums[i] + fibonacciNums[i+1]);
-  
       i++;
     }
   
@@ -355,3 +291,158 @@ fearNotLetter("bcdf");
 /* ========================================================== */
 
    /* Smallest Common Multiple */
+
+   function smallestCommons(arr) {
+
+    arr.sort((a,b) => a-b);
+  
+    let range = [];
+    let dividend = arr[1];
+  
+    for(let i = arr[0]; i <= arr[1]; i++){
+      range.push(i);
+    }
+  
+  
+    for(let j = 0; j < range.length; j++){
+      if(dividend % range[j]  !== 0){
+      
+        dividend += arr[1];
+        j=-1;
+      }
+    }
+  
+    return dividend;
+  }
+  
+  
+  smallestCommons([23,18]);
+
+
+  /* ========================================================== */
+
+   /* Drop it */
+
+   function dropElements(arr, func) {
+
+    for(let i = 0; i < arr.length; i++){
+  
+        if(func(arr[i])){
+  
+            return arr.slice(i, arr[arr.length]);
+  
+          } else if (i == arr.length-1){
+            
+            return [];
+          }
+    }
+  
+    }
+    
+    dropElements([1, 2, 3, 4], function(n) {return n > 5;});
+  
+  
+
+  /* ========================================================== */
+
+   /* Steamroller */
+   function steamrollArray(arr) {
+
+    let result = [];
+    let currentItem;
+
+    while(arr.length > 0) {
+         currentItem = arr.shift();
+
+        if(Array.isArray(currentItem)) {
+
+            arr.push(...currentItem);
+        }
+
+        else result.push(currentItem);
+    }
+
+    return result;
+  }
+
+  steamrollArray([1, [2], [3, [[4]]]]);
+
+  /* ========================================================== */
+
+   /* Binary Agents */
+   function binaryAgent(str) {
+
+    let arr = str.split(" ");
+    let letterArr = [];
+    // console.log(arr);
+    let ascii = {
+  
+      //SPECIAL CHARACTERS
+      "00111111" : "?",
+      "00100001" : "!",
+      "00100111" : "'",
+      "00100000" : " ",
+  
+      //UPPERCASE
+      "01000001" : "A","01000010" : "B","01000011" : "C","01000100" : "D","01000101" : "E","01000110" : "F","01000111" :  "G","01001000" : "H","01001001" : "I","01001010" : "J","01001011" : "K","01001100" :   "L","01001101" : "M","01001110" : "N","01001111" : "O","01010000" : "P","01010001" :  "Q","01010010" : "R","01010011" : "S","01010100" : "T","01010101" : "U","01010110" :   "V","01010111" : "W","01011000" : "X","01011001" : "Y","01011010" : "Z",
+  
+      //LOWERCASE
+      "01100001" : "a","01100010" : "b","01100011" : "c","01100100" : "d","01100101" : "e","01100110" : "f","01100111" : "g","01101000" : "h","01101001" : "i","01101010" : "j","01101011" : "k","01101100" : "l","01101101" : "m","01101110" : "n","01101111" : "o","01110000" : "p","01110001" : "q","01110010" : "r","01110011" : "s","01110100" : "t","01110101" : "u","01110110" : "v","01110111" : "w","01111000" : "x","01111001" : "y","01111010" : "z",
+      };
+      
+      for(let i = 0; i < arr.length; i ++){
+        letterArr.push(ascii[arr[i]]);
+      }
+    return letterArr.join("");
+    }
+    
+    binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+    
+
+
+  /* ========================================================== */
+
+   /* Everything Be True */
+   function truthCheck(collection, pre) {
+
+    for(let i = 0; i< collection.length; i++){
+      if(!Boolean(collection[i][pre])){
+        return false;
+      }
+    }
+      return true;
+  }
+  
+  truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+  
+
+
+  /* ========================================================== */
+
+   /* Arguments Optional */
+
+   function addTogether(a,b) {
+
+    if(typeof a !== "number"){
+      console.log(`A: ${undefined}`);
+      return undefined;
+    }
+    if(b !== undefined && typeof b !== "number"){
+      console.log(`B: ${undefined}`);
+      return undefined;
+    }
+  
+    
+    return a + b;
+  }
+  
+  addTogether(2, 3);
+
+  /* ========================================================== */
+
+   /* Make a Person */
+
+ 
+   /* ========================================================== */
+
+   /* Map the Debris */

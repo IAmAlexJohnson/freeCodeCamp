@@ -1,17 +1,24 @@
 function palindrome(str) {
-  // Good luck!
-  let regex = /[a-zA-Z0-9]/gi;
-  let forwardArr = str.toLowerCase().match(regex);
-  let backwardArr = [];
 
-  for( let i = forwardArr.length; i >= 0; i--){
-    backwardArr.push(forwardArr[i]);
+    let forwards = [];
+    let backwards = [];
+    let newStr = str.toLowerCase().replace(/[^0-9a-zA-Z]/g, '');
+
+    forwards = newStr.split("");
+  
+    for(let i = newStr.length-1; i >= 0; i--){
+        backwards.push(newStr.charAt(i));
+      }
+  
+    for(let j = 0; j < forwards.length;  j++){
+      if(forwards[j] !== backwards[j]){
+        return false;
+      }
+    }
+  
+    return true;
+    
   }
-  console.log(backwardArr.join(""));
-
-  return forwardArr.join("") == backwardArr.join("");
-}
-
-
-
-palindrome("eye");
+  
+  
+  palindrome("nope");

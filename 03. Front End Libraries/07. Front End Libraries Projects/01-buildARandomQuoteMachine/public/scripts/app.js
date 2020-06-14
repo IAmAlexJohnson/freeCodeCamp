@@ -3,58 +3,75 @@
 console.log("app.js is running!");
 
 //JSX - JavaScript XML
-var quoteInfo = {
-    quotes: ["Quote", "B", "C", "D"],
-    quoteAuthors: ["Author", "b", "c", "d"],
-    authorInfo: ["Author Info", 2, 3, 4, 5]
-};
+var quoteInfo = [{
+    quote: "Quote",
+    author: "Author",
+    citation: "Author Info"
+}, {
+    quote: "Quote2",
+    author: "Author2",
+    citation: "Author Info2"
+}, {
+    quote: "Quote3",
+    author: "Author3",
+    citation: "Author Info3"
+}];
 
-function getRandomNumber() {
-    var num = Math.round(Math.random() * quoteInfo.quotes.length);
+//on load get random number
+var num = 0;
+
+var getRandomNumber = function getRandomNumber() {
+    num = Math.floor(Math.random() * quoteInfo.length);
     console.log("NUM: " + num);
-    return num;
-}
 
-var quoteMachine = React.createElement(
-    "div",
-    { id: "quote-container" },
-    React.createElement(
-        "p",
-        { id: "quote" },
-        quoteInfo.quotes[0]
-    ),
-    React.createElement(
-        "div",
-        { id: "author-container" },
-        React.createElement(
-            "p",
-            { id: "quote-author" },
-            quoteInfo.quoteAuthors[0] ? quoteInfo.quoteAuthors[0] : 'Unknown'
-        ),
-        React.createElement(
-            "p",
-            { id: "author-info" },
-            quoteInfo.authorInfo[0] ? quoteInfo.authorInfo[0] : undefined
-        )
-    ),
-    React.createElement(
-        "div",
-        { id: "btn-container" },
-        React.createElement(
-            "button",
-            { id: "new-quote-btn", onClick: getRandomNumber() },
-            "New Quote"
-        ),
-        React.createElement(
-            "button",
-            { id: "tweet-quote-btn" },
-            "Tweet Quote"
-        )
-    )
-);
+    renderQuoteMachine();
+};
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(quoteMachine, appRoot);
-
 // onClick={getRandomNumber()}
+
+var renderQuoteMachine = function renderQuoteMachine() {
+
+    var quoteMachine = React.createElement(
+        "div",
+        { id: "quote-box" },
+        React.createElement(
+            "p",
+            { id: "text" },
+            quoteInfo[num].quote
+        ),
+        React.createElement(
+            "div",
+            { id: "author-container" },
+            React.createElement(
+                "p",
+                { id: "author" },
+                quoteInfo[num].author ? quoteInfo[num].author : 'Unknown'
+            ),
+            React.createElement(
+                "p",
+                { id: "author-info" },
+                quoteInfo[num].citation ? quoteInfo[num].citation : undefined
+            )
+        ),
+        React.createElement(
+            "div",
+            { id: "btn-container" },
+            num,
+            React.createElement(
+                "button",
+                { id: "new-quote", onClick: getRandomNumber },
+                "New Quote"
+            ),
+            React.createElement(
+                "a",
+                { target: "_blank", href: "https://twitter.com/intent/tweet/?text=", id: "tweet-quote" },
+                "Tweet Quote"
+            )
+        )
+    );
+
+    ReactDOM.render(quoteMachine, appRoot);
+};
+renderQuoteMachine();

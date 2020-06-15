@@ -27,6 +27,24 @@ var getRandomNumber = function getRandomNumber() {
     renderQuoteMachine();
 };
 
+// const getRandomQuote = () => {
+//     let quoteNum = getRandomNum(0, quoteType.length - 1);
+//     console.log(quoteType[quoteNum].quote);
+//     textID.innerHTML = quoteType[quoteNum].quote;
+//     authorID.innerHTML = quoteType[quoteNum].author;
+//     citationID.innerHTML = quoteType[quoteNum].citation;
+//     tweetMe = `${quoteType[quoteNum].quote} - ${quoteType[quoteNum].author}, ${
+//      quoteType[quoteNum].citation
+//   } @IAmAlex_Johnson`;
+// }
+
+
+var tweet = function tweet() {
+    console.log("https://twitter.com/intent/tweet?text=" + (quoteInfo[num].quote + " - " + quoteInfo[num].author + ", " + quoteInfo[num].citation + " @IAmAlex_Johnson"));
+    tweetBtn.href = "https://twitter.com/intent/tweet?text=" + (quoteInfo[num].quote + " - " + quoteInfo[num].author + ", " + quoteInfo[num].citation + " @IAmAlex_Johnson");
+};
+
+var tweetBtn = document.querySelector('#tweet-quote');
 var appRoot = document.getElementById('app');
 
 // onClick={getRandomNumber()}
@@ -58,7 +76,6 @@ var renderQuoteMachine = function renderQuoteMachine() {
         React.createElement(
             "div",
             { id: "btn-container" },
-            num,
             React.createElement(
                 "button",
                 { id: "new-quote", onClick: getRandomNumber },
@@ -66,8 +83,8 @@ var renderQuoteMachine = function renderQuoteMachine() {
             ),
             React.createElement(
                 "a",
-                { target: "_blank", href: "https://twitter.com/intent/tweet/?text=", id: "tweet-quote" },
-                "Tweet Quote"
+                { target: "_blank", href: "https://twitter.com/intent/tweet/?text=", id: "tweet-quote", onClick: tweet },
+                "Tweet"
             )
         )
     );

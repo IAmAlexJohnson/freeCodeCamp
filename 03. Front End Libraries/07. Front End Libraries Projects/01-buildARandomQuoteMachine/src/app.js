@@ -22,41 +22,30 @@ const quoteInfo= [
 
 
 
-
 //on load get random number
-let num = 0;
+let num = Math.floor(Math.random() * quoteInfo.length);;
 
 const getRandomNumber = () => {
     num = Math.floor(Math.random() * quoteInfo.length);
     console.log(`NUM: ${num}`);
 
-    renderQuoteMachine();
+    render();
 }
 
-// const getRandomQuote = () => {
-//     let quoteNum = getRandomNum(0, quoteType.length - 1);
-//     console.log(quoteType[quoteNum].quote);
-//     textID.innerHTML = quoteType[quoteNum].quote;
-//     authorID.innerHTML = quoteType[quoteNum].author;
-//     citationID.innerHTML = quoteType[quoteNum].citation;
-//     tweetMe = `${quoteType[quoteNum].quote} - ${quoteType[quoteNum].author}, ${
-//      quoteType[quoteNum].citation
-//   } @IAmAlex_Johnson`;
-// }
 
+const onFormSubmit = (e) => {
+    e.preventDefault();
+    const tweet = e.target.elements.tweet;
+    tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?text=${`${quoteInfo[num].quote} - ${quoteInfo[num].author}, ${quoteInfo[num].citation} @IAmAlex_Johnson`}" id="tweet-quote">Tweet</a>`
+};
 
-const tweet = () => {
-    console.log(`https://twitter.com/intent/tweet?text=${`${quoteInfo[num].quote} - ${quoteInfo[num].author}, ${quoteInfo[num].citation} @IAmAlex_Johnson`}`);
-    tweetBtn.href = `https://twitter.com/intent/tweet?text=${`${quoteInfo[num].quote} - ${quoteInfo[num].author}, ${quoteInfo[num].citation} @IAmAlex_Johnson`}`;
-}
 
 const tweetBtn = document.querySelector('#tweet-quote');
 const appRoot = document.getElementById('app');
 
+const initialTweet = `https://twitter.com/intent/tweet?text=${`${quoteInfo[num].quote} - ${quoteInfo[num].author}, ${quoteInfo[num].citation} @IAmAlex_Johnson`}`;
 
-// onClick={getRandomNumber()}
-
-const renderQuoteMachine = () => {
+const render = () => {
     
     const quoteMachine = (
         <div id='quote-box'>
@@ -66,16 +55,21 @@ const renderQuoteMachine = () => {
                  
                 <p id="author-info">{ quoteInfo[num].citation ? quoteInfo[num].citation : undefined }</p>
             </div>
-            <div id="btn-container">
+            <form id="btn-container" onSubmit={onFormSubmit}>
+
                 <button id="new-quote" onClick={getRandomNumber}>New Quote</button>
-                <a target="_blank" href="https://twitter.com/intent/tweet/?text=" id="tweet-quote" onClick={tweet}>Tweet
-                </a>
                 
-            </div>
+                    <button name="tweet">
+                        <a target="_blank" href={initialTweet} id="tweet-quote">
+                        Tweet
+                        </a>
+                    </button>
+                  
+            </form>
     
         </div>
     );
     
     ReactDOM.render(quoteMachine, appRoot);
 }
-renderQuoteMachine();
+render();

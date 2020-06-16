@@ -18,38 +18,27 @@ var quoteInfo = [{
 }];
 
 //on load get random number
-var num = 0;
+var num = Math.floor(Math.random() * quoteInfo.length);;
 
 var getRandomNumber = function getRandomNumber() {
     num = Math.floor(Math.random() * quoteInfo.length);
     console.log("NUM: " + num);
 
-    renderQuoteMachine();
+    render();
 };
 
-// const getRandomQuote = () => {
-//     let quoteNum = getRandomNum(0, quoteType.length - 1);
-//     console.log(quoteType[quoteNum].quote);
-//     textID.innerHTML = quoteType[quoteNum].quote;
-//     authorID.innerHTML = quoteType[quoteNum].author;
-//     citationID.innerHTML = quoteType[quoteNum].citation;
-//     tweetMe = `${quoteType[quoteNum].quote} - ${quoteType[quoteNum].author}, ${
-//      quoteType[quoteNum].citation
-//   } @IAmAlex_Johnson`;
-// }
-
-
-var tweet = function tweet() {
-    console.log("https://twitter.com/intent/tweet?text=" + (quoteInfo[num].quote + " - " + quoteInfo[num].author + ", " + quoteInfo[num].citation + " @IAmAlex_Johnson"));
-    tweetBtn.href = "https://twitter.com/intent/tweet?text=" + (quoteInfo[num].quote + " - " + quoteInfo[num].author + ", " + quoteInfo[num].citation + " @IAmAlex_Johnson");
+var onFormSubmit = function onFormSubmit(e) {
+    e.preventDefault();
+    var tweet = e.target.elements.tweet;
+    tweet.innerHTML = "<a target=\"_blank\" href=\"https://twitter.com/intent/tweet?text=" + (quoteInfo[num].quote + " - " + quoteInfo[num].author + ", " + quoteInfo[num].citation + " @IAmAlex_Johnson") + "\" id=\"tweet-quote\">Tweet</a>";
 };
 
 var tweetBtn = document.querySelector('#tweet-quote');
 var appRoot = document.getElementById('app');
 
-// onClick={getRandomNumber()}
+var initialTweet = "https://twitter.com/intent/tweet?text=" + (quoteInfo[num].quote + " - " + quoteInfo[num].author + ", " + quoteInfo[num].citation + " @IAmAlex_Johnson");
 
-var renderQuoteMachine = function renderQuoteMachine() {
+var render = function render() {
 
     var quoteMachine = React.createElement(
         "div",
@@ -74,21 +63,25 @@ var renderQuoteMachine = function renderQuoteMachine() {
             )
         ),
         React.createElement(
-            "div",
-            { id: "btn-container" },
+            "form",
+            { id: "btn-container", onSubmit: onFormSubmit },
             React.createElement(
                 "button",
                 { id: "new-quote", onClick: getRandomNumber },
                 "New Quote"
             ),
             React.createElement(
-                "a",
-                { target: "_blank", href: "https://twitter.com/intent/tweet/?text=", id: "tweet-quote", onClick: tweet },
-                "Tweet"
+                "button",
+                { name: "tweet" },
+                React.createElement(
+                    "a",
+                    { target: "_blank", href: initialTweet, id: "tweet-quote" },
+                    "Tweet"
+                )
             )
         )
     );
 
     ReactDOM.render(quoteMachine, appRoot);
 };
-renderQuoteMachine();
+render();

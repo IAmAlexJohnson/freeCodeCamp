@@ -22,11 +22,43 @@ var QuoteMachine = function (_React$Component) {
     _createClass(QuoteMachine, [{
         key: 'render',
         value: function render() {
+            var title = 'Random Quote Machine';
+            var subtitle = 'Use space to cycle through quotes, and the numbers 1-5 to cycle through quotes types.';
+            var quoteInfo = [{
+                quote: "Quoteee",
+                author: "Author",
+                citation: "Author Info"
+            }, {
+                quote: "Quote2",
+                author: "Author2",
+                citation: "Author Info2"
+            }, {
+                quote: "Quote3",
+                author: "Author3",
+                citation: "Author Info3"
+            }];
+
+            var num = Math.floor(Math.random() * quoteInfo.length);
+            var initialTweet = 'https://twitter.com/intent/tweet?text=' + (quoteInfo[num].quote + ' - ' + quoteInfo[num].author + ', ' + quoteInfo[num].citation + ' @IAmAlex_Johnson');
+
+            var getRandomNumber = function getRandomNumber() {
+                num = Math.floor(Math.random() * quoteInfo.length);
+                console.log('NUM: ' + num);
+            };
+
+            var onFormSubmit = function onFormSubmit(e) {
+                e.preventDefault();
+                var tweet = e.target.elements.tweet;
+                tweet.innerHTML = '<a target="_blank" href="https://twitter.com/intent/tweet?text=' + (quoteInfo[num].quote + ' - ' + quoteInfo[num].author + ', ' + quoteInfo[num].citation + ' @IAmAlex_Johnson') + '" id="tweet-quote">Tweet</a>';
+            };
+
+            var tweetBtn = document.querySelector('#tweet-quote');
+            console.log(num);
             return React.createElement(
                 'div',
                 null,
-                React.createElement(Header, null),
-                React.createElement(QuoteBox, null)
+                React.createElement(Header, { title: title, subtitle: subtitle }),
+                React.createElement(QuoteBox, { quoteInfo: quoteInfo, num: this.props.num })
             );
         }
     }]);
@@ -52,12 +84,12 @@ var Header = function (_React$Component2) {
                 React.createElement(
                     'h1',
                     null,
-                    'Random Quote Machine'
+                    this.props.title
                 ),
                 React.createElement(
                     'h2',
                     null,
-                    'Use space to cycle through quotes, and the numbers 1-5 to cycle through quotes types'
+                    this.props.subtitle
                 )
             );
         }
@@ -81,7 +113,10 @@ var QuoteBox = function (_React$Component3) {
             return React.createElement(
                 'div',
                 { id: 'quote-box' },
-                React.createElement(Quote, null)
+                console.log(this.props.num),
+                React.createElement(Quote, { quoteInfo: this.props.quoteInfo, num: this.props.num }),
+                React.createElement(AuthorInfo, { quoteInfo: this.props.quoteInfo, num: this.props.num }),
+                React.createElement(Buttons, { onFormSubmit: this.props.onFormSubmit })
             );
         }
     }]);
@@ -102,14 +137,160 @@ var Quote = function (_React$Component4) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'div',
-                null,
-                'I am a Quote.'
+                'p',
+                { id: 'text' },
+                console.log(this.props.num),
+                ' - ',
+                this.props.quoteInfo[0].quote
             );
         }
     }]);
 
     return Quote;
+}(React.Component);
+
+var AuthorInfo = function (_React$Component5) {
+    _inherits(AuthorInfo, _React$Component5);
+
+    function AuthorInfo() {
+        _classCallCheck(this, AuthorInfo);
+
+        return _possibleConstructorReturn(this, (AuthorInfo.__proto__ || Object.getPrototypeOf(AuthorInfo)).apply(this, arguments));
+    }
+
+    _createClass(AuthorInfo, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                { id: 'author-container' },
+                React.createElement(Author, { quoteInfo: this.props.quoteInfo, num: this.props.num }),
+                React.createElement(Citation, { quoteInfo: this.props.quoteInfo, num: this.props.num })
+            );
+        }
+    }]);
+
+    return AuthorInfo;
+}(React.Component);
+
+var Author = function (_React$Component6) {
+    _inherits(Author, _React$Component6);
+
+    function Author() {
+        _classCallCheck(this, Author);
+
+        return _possibleConstructorReturn(this, (Author.__proto__ || Object.getPrototypeOf(Author)).apply(this, arguments));
+    }
+
+    _createClass(Author, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'p',
+                { id: 'author' },
+                this.props.quoteInfo[0].author ? this.props.quoteInfo[0].author : 'Unknown'
+            );
+        }
+    }]);
+
+    return Author;
+}(React.Component);
+
+var Citation = function (_React$Component7) {
+    _inherits(Citation, _React$Component7);
+
+    function Citation() {
+        _classCallCheck(this, Citation);
+
+        return _possibleConstructorReturn(this, (Citation.__proto__ || Object.getPrototypeOf(Citation)).apply(this, arguments));
+    }
+
+    _createClass(Citation, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'p',
+                { id: 'citation' },
+                this.props.quoteInfo[0].citation ? this.props.quoteInfo[0].citation : undefined
+            );
+        }
+    }]);
+
+    return Citation;
+}(React.Component);
+
+var Buttons = function (_React$Component8) {
+    _inherits(Buttons, _React$Component8);
+
+    function Buttons() {
+        _classCallCheck(this, Buttons);
+
+        return _possibleConstructorReturn(this, (Buttons.__proto__ || Object.getPrototypeOf(Buttons)).apply(this, arguments));
+    }
+
+    _createClass(Buttons, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'form',
+                { id: 'btn-container', onSubmit: this.props.onFormSubmit },
+                React.createElement(Button, { getRandomNumber: this.props.getRandomNumber }),
+                React.createElement(Tweet, { initialTweet: this.props.initialTweet })
+            );
+        }
+    }]);
+
+    return Buttons;
+}(React.Component);
+
+var Button = function (_React$Component9) {
+    _inherits(Button, _React$Component9);
+
+    function Button() {
+        _classCallCheck(this, Button);
+
+        return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+    }
+
+    _createClass(Button, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'button',
+                { id: 'new-quote', onClick: this.props.getRandomNumber },
+                'New Quote'
+            );
+        }
+    }]);
+
+    return Button;
+}(React.Component);
+
+var Tweet = function (_React$Component10) {
+    _inherits(Tweet, _React$Component10);
+
+    function Tweet() {
+        _classCallCheck(this, Tweet);
+
+        return _possibleConstructorReturn(this, (Tweet.__proto__ || Object.getPrototypeOf(Tweet)).apply(this, arguments));
+    }
+
+    _createClass(Tweet, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'button',
+                { name: 'tweet' },
+                React.createElement(
+                    'a',
+                    { target: '_blank', href: this.props.initialTweet, id: 'tweet-quote' },
+                    'Tweet'
+                )
+            );
+        }
+    }]);
+
+    return Tweet;
 }(React.Component);
 
 ReactDOM.render(React.createElement(QuoteMachine, null), appRoot);

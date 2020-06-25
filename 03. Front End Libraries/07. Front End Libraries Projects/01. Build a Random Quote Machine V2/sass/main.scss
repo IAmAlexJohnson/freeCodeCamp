@@ -1,4 +1,66 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+}
+
+#quote-box {
+   border-left: 2px solid black;
+   border-right: 2px solid black;
+   border-top: 2px solid black;
+   padding:10px 20px;
+}
+
+#button-box {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding:10px 20px;
+}
+
+#quote {
+    font-family: 'Caveat', cursive;
+}
+
+#quote-author, #citation {
+    font-family: 'Permanent Marker', cursive;
+}
+
+button {
+    background-color: #FFF;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    &:hover {
+        background-color: #F7F7F7;
+        cursor: pointer;
+    }
+}
+
+#tweet {
+    background-color: #FFF;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    &:hover {
+        background-color: #F7F7F7;
+        cursor: pointer;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }

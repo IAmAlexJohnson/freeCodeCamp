@@ -32,8 +32,7 @@ function randomNumber(){
 function randomQuote(){
     randomNumber();
     quoteBox.innerHTML=  `<h2 id="quote"> ${quotes[num].quote} </h2>
-    <h3 id="quote-author"> ${quotes[num].author} </h3>
-    <h4 id="citation"> ${quotes[num].citation} </h4>`;
+    <h3 id="quote-author">- ${quotes[num].author}, <span id="citation"> ${quotes[num].citation}</span></h3>`;
 }
 
 randomQuote();
@@ -42,4 +41,4 @@ newQuote.addEventListener("click", function(){
     randomQuote();
 });
 
-tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?text=${`${quotes[num].quote} - ${quotes[num].author}, ${quotes[num].citation} @IAmAlex_Johnson`}" id="tweet-quote">Tweet</a>`
+tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?text=${`${quotes[num].quote} - ${quotes[num].author}, ${quotes[num].citation} @IAmAlex_Johnson`}">Tweet</a>`

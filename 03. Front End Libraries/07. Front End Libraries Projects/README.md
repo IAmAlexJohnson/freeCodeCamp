@@ -6,8 +6,8 @@
 
 |                                                                                                               Github Project Link                                                                                                               | CodePen Project Link                                                                   |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------- |
-| [Build a Random Quote Machine]() | [Build a Random Quote Machine CodePen]() |
-|[Build a Markdown Previewer]()    | [Build a Markdown Previewer CodePen]()   |
+| [Build a Random Quote Machine](https://htmlpreview.github.io/?https://github.com/IAmAlexJohnson/freeCodeCamp/blob/master/03.%20Front%20End%20Libraries/07.%20Front%20End%20Libraries%20Projects/01.%20Build%20a%20Random%20Quote%20Machine%20V2/index.html) | [Build a Random Quote Machine CodePen]() |
+|[Build a Markdown Previewer](https://htmlpreview.github.io/?https://github.com/IAmAlexJohnson/freeCodeCamp/blob/master/03.%20Front%20End%20Libraries/07.%20Front%20End%20Libraries%20Projects/02.Markdown%20Previewer%20V2/index.html)    | [Build a Markdown Previewer CodePen]()   |
 |[Build a Drum Machine]()          | [Build a Drum Machine CodePen]()         |
 |[Build a JavaScript Calculator]() | [Build a JavaScript Calculator CodePen]()|
 |[Build a Pomodoro Clock]()| [Build a Pomodoro Clock CodePen]()|

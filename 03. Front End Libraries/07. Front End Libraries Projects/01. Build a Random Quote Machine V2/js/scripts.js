@@ -92,8 +92,9 @@ function randomNumber(arr){
 
 function randomQuote(){
     let num = randomNumber(quotes);
-    quoteBox.innerHTML=  `<h1>Random Quote Machine</h1> <h2 id="quote"> ${quotes[num].quote} </h2>
-    <h3><span id="quote-author">- ${quotes[num].author}</span><span id="citation">, ${quotes[num].citation}</span></h3>`;
+    quoteBox.innerHTML=  `<h1>Random Quote Machine</h1> <h2 id="text"> ${quotes[num].quote} </h2>
+    <h3><span id="author">- ${quotes[num].author}</span><span id="citation">, ${quotes[num].citation}</span></h3>
+    `;
 }
 function setup (){
     randomBackground();

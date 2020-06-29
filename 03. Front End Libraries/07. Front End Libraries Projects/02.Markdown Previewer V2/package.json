@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass src/styles/sass/main.scss public/css/style.css -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
   }
 }
